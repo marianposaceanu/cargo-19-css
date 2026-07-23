@@ -7,7 +7,7 @@
 - Restored the 1.0 typography, theme palette, rounded surface geometry, and full component-showcase landing page.
 - Retained the 1.2 generated 59-glyph sign system, expanded components, responsive manual, examples, JavaScript behaviors, and release validation.
 - Preserved the stronger fixed equipment-sign palette introduced after 1.0 while returning interface colors to the original visual direction.
-- Kept the landing page deliberately curated while continuing to generate the manual and examples from framework classes.
+- Kept the landing page deliberately curated while maintaining the manual and examples as Pages-ready framework HTML.
 
 ### Components and motion
 
@@ -20,6 +20,7 @@
 - Tightened the landing-page palette rail and bounded the vacuum-black swatch so every specified color remains visible.
 - Added explicit creator attribution and a semantic author link across the public site and package metadata.
 - Added a visible GitHub repository link to the homepage app bar on desktop and mobile.
+- Built dependency-free, idiomatic Ruby tooling for generation, release packaging, and validation.
 
 ## 1.2.0 — 2026-07-21
 

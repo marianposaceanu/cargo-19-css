@@ -150,13 +150,13 @@ It does not create global variables and leaves layout and baseline semantics in 
 
 ## Build and validation
 
-The release pipeline uses the Ruby standard library plus optional local validators when available:
+The release pipeline uses only the Ruby standard library, with Node.js used for an additional JavaScript syntax check when available:
 
 ```bash
 ruby tools/release.rb
 ```
 
-That command regenerates icons, CSS, JavaScript, documentation, metadata checksums, and then runs structural validation.
+That command regenerates icons, CSS, JavaScript, metadata, and checksums; normalizes the checked-in GitHub Pages documentation; and then runs structural validation.
 
 Individual commands:
 
@@ -167,7 +167,7 @@ ruby tools/build_docs.rb
 ruby tools/validate.rb
 ```
 
-Validation checks include icon counts and viewBoxes, duplicate SVG and HTML IDs, local asset links, generated-page theme usage, prohibition of page-local style blocks, font-binary exclusion, CSS delimiter balance, JavaScript syntax when Node.js is available, and checksum freshness.
+Validation checks include icon counts and viewBoxes, duplicate SVG and HTML IDs, local asset links, generated-page theme usage, prohibition of page-local style blocks, font-binary exclusion, CSS delimiter balance, JavaScript syntax when Node.js is available, checksum freshness, and enforcement of the Ruby-only toolchain.
 
 ## Accessibility
 
