@@ -20,7 +20,7 @@ module Cargo19
       70-motion.css
     ].freeze
 
-    VERSION = "1.3.0"
+    VERSION = "1.3.1"
     BANNER = "/*! CARGO/19 CSS v#{VERSION} | MIT License | Independent operational UI framework */\n"
     LAYERS = "@layer c19.reset, c19.tokens, c19.base, c19.typography, c19.layout, c19.components, c19.utilities, c19.motion;\n"
     class << self

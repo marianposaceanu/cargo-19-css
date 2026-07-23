@@ -11,7 +11,7 @@ require_relative "validate"
 module Cargo19
   class Release
     ROOT = File.expand_path("..", __dir__)
-    VERSION = "1.3.0"
+    VERSION = "1.3.1"
     HASH_FILES = %w[
       dist/cargo19.css
       dist/cargo19-core.css

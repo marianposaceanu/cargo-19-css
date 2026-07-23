@@ -1,6 +1,6 @@
 # Typography research and font sources
 
-CARGO/19 separates historical reference from the open-source implementation shipped by the framework. No font binary is included in the package.
+CARGO/19 CSS separates historical reference from the open-source implementation shipped by the framework. No font binary is included in the package.
 
 ## Historical reference
 
@@ -14,7 +14,7 @@ A broader survey of the film's screens and signage shows that the production use
 
 - https://typesetinthefuture.com/2014/12/01/alien/
 
-## Open-source stack used by CARGO/19
+## Open-source stack used by CARGO/19 CSS
 
 | Role | Family | Package use | Official source | License |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@ A broader survey of the film's screens and signage shows that the production use
 
 ## Commercial Helvetica route
 
-A product that needs a licensed Helvetica implementation should obtain the appropriate desktop or web license from an authorized foundry or distributor and host it according to that license. Keep licensed commercial files outside the CARGO/19 package.
+A product that needs a licensed Helvetica implementation should obtain the appropriate desktop or web license from an authorized foundry or distributor and host it according to that license. Keep licensed commercial files outside the CARGO/19 CSS package.
 
 - https://www.monotype.com/fonts/helvetica-now
 - https://www.monotype.com/fonts/library

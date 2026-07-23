@@ -81,7 +81,7 @@ module Cargo19
 
   class Validator
     ROOT = File.expand_path("..", __dir__)
-    VERSION = "1.3.0"
+    VERSION = "1.3.1"
     HTML_FILES = [File.join(ROOT, "index.html"), *Dir.glob(File.join(ROOT, "{docs,examples}", "*.html")).sort].freeze
     HASH_FILES = %w[
       dist/cargo19.css
@@ -113,6 +113,8 @@ module Cargo19
         report("12 themed framework-only HTML pages, embedded sprites, and local references")
         check_manual_contract
         report("manual coverage for components, motion, tokens, typography, and Safari icon delivery")
+        check_branding
+        report("product naming and text-only manual branding")
         check_spacing_utilities
         report("every spacing utility used by the pages is defined")
         check_css
@@ -127,7 +129,7 @@ module Cargo19
           check_no_temporary_files
           report("release tree contains no temporary audit files")
         end
-        puts "CARGO/19 validation passed."
+        puts "CARGO/19 CSS validation passed."
       end
 
       private
@@ -228,16 +230,26 @@ module Cargo19
         fail!("Expected 12 generated HTML pages, found #{HTML_FILES.length}") unless HTML_FILES.length == 12
 
         HTML_FILES.each do |page|
-          audit = PageAudit.new(File.read(page, encoding: "UTF-8"))
+          source = File.read(page, encoding: "UTF-8")
+          audit = PageAudit.new(source)
           rel = relative(page)
           duplicates = audit.ids.tally.select { |_name, count| count > 1 }.keys
           fail!("Duplicate HTML IDs in #{rel}: #{duplicates}") unless duplicates.empty?
           fail!("Page-local <style> block found in #{rel}") unless audit.style_tags.zero?
           fail!("#{rel} must load exactly one dist/cargo19.css stylesheet") unless audit.stylesheets.length == 1 && audit.stylesheets.first.end_with?("dist/cargo19.css")
-          fail!("#{rel} must load exactly one dist/cargo19.js script") unless audit.scripts.length == 1 && audit.scripts.first.end_with?("dist/cargo19.js")
+          expected_scripts = if rel == "examples/bridge-dashboard.html"
+                               ["../dist/cargo19.js", "bridge-dashboard.js"]
+                             else
+                               [audit.scripts.first]
+                             end
+          unless audit.scripts == expected_scripts && audit.scripts.first&.end_with?("dist/cargo19.js")
+            fail!("Unexpected script inventory in #{rel}: #{audit.scripts}")
+          end
           fail!("Missing valid data-c19-theme on #{rel}") unless %w[paper bridge auto].include?(audit.html_theme)
           fail!("Missing c19-root body class on #{rel}") unless audit.body_classes.include?("c19-root")
           fail!("#{rel} must embed the complete generated icon sprite") unless audit.symbol_ids.to_set == symbol_ids
+          expected_sprite = embedded_sprite(page == File.join(ROOT, "index.html"))
+          fail!("#{rel} contains a stale embedded icon sprite") unless source.include?(expected_sprite)
           external_uses = audit.use_references.reject { |value| value.start_with?("#c19-") }
           fail!("Cross-file SVG <use> reference found in #{rel}: #{external_uses.first(3)}") unless external_uses.empty?
           non_framework = audit.classes.reject { |name| name.start_with?("c19-") }.uniq.sort
@@ -251,6 +263,16 @@ module Cargo19
         rescue SystemCallError, EncodingError => error
           fail!("Cannot parse #{relative(page)}: #{error.message}")
         end
+      end
+
+      def embedded_sprite(landing_page)
+        source = File.read(File.join(ROOT, "icons", "cargo19-icons.svg"), encoding: "UTF-8").strip
+        return source if landing_page
+
+        source.sub(
+          'aria-hidden="true" style="display:none"',
+          'aria-hidden="true" focusable="false" class="c19-inline-sprite"'
+        )
       end
 
       def check_reference(page, rel, tag, attribute, value, symbol_ids)
@@ -274,6 +296,36 @@ module Cargo19
           missing = snippets.reject { |snippet| text.include?(snippet) }
           fail!("Manual coverage missing from #{path}: #{missing}") unless missing.empty?
         end
+      end
+
+      def check_branding
+        public_files = [
+          File.join(ROOT, "README.md"),
+          File.join(ROOT, "NOTICE.md"),
+          File.join(ROOT, "LICENSE"),
+          File.join(ROOT, "FONT-SOURCES.md"),
+          File.join(ROOT, "CHANGELOG.md"),
+          File.join(ROOT, "icons", "README.md"),
+          File.join(ROOT, "icons", "catalog.json"),
+          *HTML_FILES
+        ]
+        inconsistent = public_files.select do |path|
+          File.read(path, encoding: "UTF-8").match?(/CARGO\/19(?! CSS)/)
+        end
+        fail!("Inconsistent product name in: #{inconsistent.map { |path| relative(path) }.join(", ")}") unless inconsistent.empty?
+
+        Dir.glob(File.join(ROOT, "docs", "*.html")).each do |path|
+          source = File.read(path, encoding: "UTF-8")
+          header = source[/<header class="c19-appbar".*?<\/header>/m]
+          unless header&.include?('class="c19-brand c19-brand--manual"') &&
+                 header.include?("CARGO/19 CSS") &&
+                 !header.include?("c19-brand__mark")
+            fail!("Manual header must use the text-only CARGO/19 CSS brand: #{relative(path)}")
+          end
+        end
+
+        landing = File.read(File.join(ROOT, "index.html"), encoding: "UTF-8")
+        fail!("Landing title must use the complete product name") unless landing.include?('aria-label="CARGO/19 CSS"')
       end
 
       def check_spacing_utilities
@@ -323,13 +375,20 @@ module Cargo19
       end
 
       def check_javascript
-        path = File.join(ROOT, "dist/cargo19.js")
-        source = File.read(path, encoding: "UTF-8")
-        fail!("JavaScript helper must remain scoped in an IIFE") unless source.lstrip.start_with?("(() =>")
+        paths = [
+          File.join(ROOT, "dist/cargo19.js"),
+          File.join(ROOT, "examples", "bridge-dashboard.js")
+        ]
+        paths.each do |path|
+          source = File.read(path, encoding: "UTF-8")
+          fail!("#{relative(path)} must remain scoped in an IIFE") unless source.lstrip.start_with?("(() =>")
+        end
         return unless system("command -v node >/dev/null 2>&1")
 
-        _stdout, stderr, status = Open3.capture3("node", "--check", path)
-        fail!("JavaScript syntax check failed: #{stderr.strip}") unless status.success?
+        paths.each do |path|
+          _stdout, stderr, status = Open3.capture3("node", "--check", path)
+          fail!("JavaScript syntax check failed in #{relative(path)}: #{stderr.strip}") unless status.success?
+        end
       end
 
       def check_hashes

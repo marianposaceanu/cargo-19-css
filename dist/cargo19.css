@@ -1,4 +1,4 @@
-/*! CARGO/19 CSS v1.3.0 | MIT License | Independent operational UI framework */
+/*! CARGO/19 CSS v1.3.1 | MIT License | Independent operational UI framework */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @layer c19.reset, c19.tokens, c19.base, c19.typography, c19.layout, c19.components, c19.utilities, c19.motion;
 
@@ -2219,6 +2219,10 @@
 
     .c19-brand__text {
       display: none;
+    }
+
+    .c19-brand--manual .c19-brand__text {
+      display: inline;
     }
 
     .c19-doc-hero {

@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.3.0 — 2026-07-23
+## 1.3.1 — 2026-07-24
 
 ### Consolidation
 
@@ -22,6 +22,9 @@
 - Added a visible GitHub repository link to the homepage app bar on desktop and mobile.
 - Built dependency-free, idiomatic Ruby tooling for generation, release packaging, and validation.
 - Completed the spacing scale used by the manual and refined the creator attribution.
+- Standardized the CARGO/19 CSS name across the package and simplified the manual header to a text-only brand.
+- Added restrained live telemetry and interactive command feedback to the bridge dashboard example.
+- Simplified the Cryogenic, High Radiation, Navigation, Biological, Intercom, Warning Beacon, and Location glyphs.
 
 ## 1.2.0 — 2026-07-21
 
@@ -42,7 +45,7 @@
 
 ### Documentation
 
-- Rebuilt the landing page, manual, component reference, icon catalog, typography guide, token guide, accessibility notes, attribution, changelog, and examples using CARGO/19 classes only.
+- Rebuilt the landing page, manual, component reference, icon catalog, typography guide, token guide, accessibility notes, attribution, changelog, and examples using CARGO/19 CSS classes only.
 - Added one responsive documentation shell with numbered desktop navigation and a mobile disclosure menu.
 - Added live component specimens, icon filtering, copy controls, theme persistence, and responsive examples.
 - Removed page-local style blocks from all generated documentation.

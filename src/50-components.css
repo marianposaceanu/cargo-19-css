@@ -1816,6 +1816,10 @@
       display: none;
     }
 
+    .c19-brand--manual .c19-brand__text {
+      display: inline;
+    }
+
     .c19-doc-hero {
       padding-block: 2.75rem;
     }

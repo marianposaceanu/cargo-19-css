@@ -4,7 +4,7 @@
 
 [Open the live showcase and system manual →](https://marianposaceanu.github.io/cargo-19-css/)
 
-CARGO/19 is a small, dependency-free CSS framework for operational, retro-future interfaces. Version 1.3 consolidates the original 1.0 visual direction with the generated semiotic system, documentation, behaviors, and validation developed in 1.1 and 1.2.
+CARGO/19 CSS is a small, dependency-free CSS framework for operational, retro-future interfaces. Version 1.3 consolidates the original 1.0 visual direction with the generated semiotic system, documentation, behaviors, and validation developed in 1.1 and 1.2.
 
 Created by [Marian Posaceanu](https://marianposaceanu.com/).
 
@@ -148,6 +148,8 @@ JavaScript is optional. `dist/cargo19.js` enables:
 
 It does not create global variables and leaves layout and baseline semantics in HTML and CSS.
 
+The bridge dashboard includes a small example-only script that updates telemetry and records button commands without adding demo behavior to the framework runtime.
+
 ## Build and validation
 
 The release pipeline uses only the Ruby standard library, with Node.js used for an additional JavaScript syntax check when available:
@@ -187,7 +189,7 @@ The framework targets current evergreen browsers. It uses cascade layers, custom
 ## Project structure
 
 ```text
-cargo19-css-1.3.0/
+cargo19-css-1.3.1/
 ├── dist/                     compiled CSS and optional JavaScript
 ├── src/                      layered source files
 ├── icons/                    sprite, 118 standalone exports, and catalog

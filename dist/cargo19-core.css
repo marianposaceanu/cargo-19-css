@@ -1,4 +1,4 @@
-/*! CARGO/19 CSS v1.3.0 | MIT License | Independent operational UI framework */
+/*! CARGO/19 CSS v1.3.1 | MIT License | Independent operational UI framework */
 @layer c19.reset, c19.tokens, c19.base, c19.typography, c19.layout, c19.components, c19.utilities, c19.motion;
 
 @layer c19.tokens {
@@ -2218,6 +2218,10 @@
 
     .c19-brand__text {
       display: none;
+    }
+
+    .c19-brand--manual .c19-brand__text {
+      display: inline;
     }
 
     .c19-doc-hero {

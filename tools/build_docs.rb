@@ -4,7 +4,7 @@
 module Cargo19
   # The manual pages are deliberately checked in so GitHub Pages can serve the
   # repository without a separate build service. This builder keeps that
-  # authored HTML deterministic and applies toolchain references in one place.
+  # authored HTML deterministic and synchronizes the generated icon sprite.
   class DocsBuilder
     ROOT = File.expand_path("..", __dir__)
     PAGE_GLOBS = ["index.html", "docs/*.html", "examples/*.html"].freeze
@@ -23,8 +23,19 @@ module Cargo19
 
       def normalize(path)
         source = File.read(path, encoding: "UTF-8")
+        source.sub!(%r{<svg xmlns="http://www\.w3\.org/2000/svg" aria-hidden="true" focusable="false" class="c19-inline-sprite">.*?</svg>}m, inline_sprite) unless path == File.join(ROOT, "index.html")
         normalized = "#{source.lines.map(&:rstrip).join("\n")}\n"
         File.write(path, normalized)
+      end
+
+      def inline_sprite
+        File
+          .read(File.join(ROOT, "icons", "cargo19-icons.svg"), encoding: "UTF-8")
+          .strip
+          .sub(
+            'aria-hidden="true" style="display:none"',
+            'aria-hidden="true" focusable="false" class="c19-inline-sprite"'
+          )
       end
     end
   end

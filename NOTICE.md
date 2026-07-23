@@ -1,6 +1,6 @@
 # Attribution and source notes
 
-CARGO/19 is an independent, unofficial design study.
+CARGO/19 CSS is an independent, unofficial design study.
 
 ## Visual references
 
