@@ -2004,6 +2004,14 @@
       display: none;
     }
 
+    .c19-appbar__inner > .c19-cluster > .c19-home-repo-link {
+      display: inline-flex;
+    }
+
+    .c19-appbar__inner > .c19-cluster > .c19-home-version {
+      display: none;
+    }
+
     .c19-appbar__inner > .c19-cluster {
       flex-wrap: nowrap;
       flex: 0 0 auto;

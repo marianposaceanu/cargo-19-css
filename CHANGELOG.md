@@ -19,6 +19,7 @@
 - Replaced atmospheric gradients with flat surfaces, hard signal bands, and solid loading motion.
 - Tightened the landing-page palette rail and bounded the vacuum-black swatch so every specified color remains visible.
 - Added explicit creator attribution and a semantic author link across the public site and package metadata.
+- Added a visible GitHub repository link to the homepage app bar on desktop and mobile.
 
 ## 1.2.0 — 2026-07-21
 
