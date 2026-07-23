@@ -310,10 +310,8 @@ module Cargo19
                rect(8, 4, 3, 10, G, 0.35) + rect(4.5, 7.5, 10, 3, G, 0.35),
                tone: "bio", keywords: ["cross", "health", "first aid"]),
           icon("navigation", "Navigation", "operations", "Navigation and route-planning station.",
-               circle(9.5, 9, 4.8, "none", D, 1.1) +
-               polygon("9.5 4 11 9.3 9.5 8.7 8 9.3", B) +
-               polygon("9.5 14 8 8.7 9.5 9.3 11 8.7", D) +
-               circle(9.5, 9, 0.65, P),
+               polygon("9.5 3.8 14 14 9.5 11.7 5 14", D) +
+               polygon("9.5 5.2 9.5 10.5 6.7 12", B),
                tone: "cold", keywords: ["compass", "route", "heading"]),
           icon("communications", "Communications", "communications", "Radio or network communications.",
                rect(8.6, 8, 1.8, 5.5, D, 0.5) + circle(9.5, 7.1, 1.25, P) +
