@@ -25,6 +25,7 @@
 - Standardized the CARGO/19 CSS name across the package and simplified the manual header to a text-only brand.
 - Added restrained live telemetry and interactive command feedback to the bridge dashboard example.
 - Simplified the Cryogenic, High Radiation, Navigation, Biological, Intercom, Warning Beacon, and Location glyphs.
+- Refined Navigation to a single directional pointer and linked the live dashboard directly from the tighter homepage hero.
 
 ## 1.2.0 — 2026-07-21
 
