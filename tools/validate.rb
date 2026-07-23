@@ -115,6 +115,8 @@ module Cargo19
         report("manual coverage for components, motion, tokens, typography, and Safari icon delivery")
         check_branding
         report("product naming and text-only manual branding")
+        check_dashboard_contract
+        report("dynamic bridge dashboard components and text-only header")
         check_spacing_utilities
         report("every spacing utility used by the pages is defined")
         check_css
@@ -326,6 +328,41 @@ module Cargo19
 
         landing = File.read(File.join(ROOT, "index.html"), encoding: "UTF-8")
         fail!("Landing title must use the complete product name") unless landing.include?('aria-label="CARGO/19 CSS"')
+      end
+
+      def check_dashboard_contract
+        html_path = File.join(ROOT, "examples", "bridge-dashboard.html")
+        script_path = File.join(ROOT, "examples", "bridge-dashboard.js")
+        html = File.read(html_path, encoding: "UTF-8")
+        script = File.read(script_path, encoding: "UTF-8")
+        header = html[/<header class="c19-appbar".*?<\/header>/m]
+
+        unless header&.include?('class="c19-brand c19-brand--manual"') &&
+               header.include?("CARGO/19 CSS") &&
+               !header.include?("c19-brand__mark")
+          fail!("Bridge dashboard header must use the text-only CARGO/19 CSS brand")
+        end
+
+        components = %w[
+          c19-alert
+          c19-progress
+          c19-segmented-meter
+          c19-tabs
+          c19-switch
+          c19-commandbar
+        ]
+        missing_components = components.reject { |component| html.include?(component) }
+        fail!("Bridge dashboard component coverage missing: #{missing_components}") unless missing_components.empty?
+
+        hooks = %w[
+          data-c19-demo-advisory
+          data-c19-demo-bus-a-bar
+          data-c19-demo-command-form
+          data-c19-demo-signal-meter
+          data-c19-demo-stream-toggle
+        ]
+        missing_hooks = hooks.reject { |hook| html.include?(hook) && script.include?("[#{hook}]") }
+        fail!("Bridge dashboard dynamic hooks missing: #{missing_hooks}") unless missing_hooks.empty?
       end
 
       def check_spacing_utilities
