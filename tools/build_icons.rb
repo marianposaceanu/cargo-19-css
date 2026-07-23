@@ -175,7 +175,10 @@ module Cargo19
                line(4.4, 13.3, 14.6, 4.7, P, 1.25, "round"),
                tone: "process", keywords: ["zero g", "no gravity", "floating"]),
           icon("cryogenic", "Cryogenic", "temperature", "Cryogenic equipment or very low temperature.",
-               snowflake + rect(3.8, 5.2, 1.2, 7.6, D, 0.6) + circle(4.4, 12.6, 1.35, B),
+               line(9.5, 4.2, 9.5, 13.8, B, 1.35, "round") +
+               line(5.4, 6.6, 13.6, 11.4, B, 1.35, "round") +
+               line(5.4, 11.4, 13.6, 6.6, B, 1.35, "round") +
+               circle(9.5, 9, 0.9, D),
                tone: "cold", keywords: ["cold", "freeze", "temperature"]),
           icon("airlock", "Airlock", "access", "Pressure-sealed airlock.",
                rect(4.4, 4, 4.4, 10, D, 0.45) + rect(10.2, 4, 4.4, 10, D, 0.45) +
@@ -228,8 +231,8 @@ module Cargo19
           icon("radiation", "Radiation", "hazard", "Ionizing radiation.", radiation,
                tone: "process", keywords: ["nuclear", "ionizing", "hazard"]),
           icon("radiation-high", "High radiation", "hazard", "Elevated ionizing radiation.",
-               group(radiation, transform: "translate(-.8 0) scale(.92)") +
-               polygon("13.1 5 15 7 13.1 9", D) + polygon("13.1 9 15 11 13.1 13", D),
+               polygon("9.5 3.3 15.2 13.7 3.8 13.7", D) +
+               group(radiation, transform: "translate(4 3.8) scale(.58)"),
                tone: "process", keywords: ["high", "radiation", "danger"]),
           icon("refrigerator", "Refrigerator", "temperature", "Cold storage or refrigeration unit.",
                rect(4.4, 3.8, 10.2, 10.4, D, 0.8) + rect(5.6, 5, 7.8, 8, PLATE, 0.35) +
@@ -282,9 +285,8 @@ module Cargo19
                line(6, 10.5, 13, 10.5, S, 1.1) + line(6, 13, 13, 13, S, 1.1),
                keywords: ["access", "climb", "vertical"]),
           icon("intercom", "Intercom", "communications", "Intercom or public-address point.",
-               polygon("4.2 7 7.2 7 11.7 4.3 11.7 13.7 7.2 11 4.2 11", D) +
-               path("M13 7C14 7.7 14 10.3 13 11", "none", P, 1.05, "round") +
-               path("M14.4 5.8C16.2 7.2 16.2 10.8 14.4 12.2", "none", P, 0.9, "round"),
+               polygon("4.1 7.2 7 7.2 11.5 4.6 11.5 13.4 7 10.8 4.1 10.8", D) +
+               path("M13.1 6.4C15.1 7.6 15.1 10.4 13.1 11.6", "none", P, 1.25, "round"),
                tone: "process", keywords: ["speaker", "audio", "announcement"]),
           icon("storage-nonorganic", "Non-organic storage", "storage",
                "Storage for non-organic materials.",
@@ -301,17 +303,17 @@ module Cargo19
                path("M6.2 11.2C6.4 8.9 8.1 8 9.3 8.2C9.2 10.2 8 11.4 6.2 11.2ZM7 10.7L8.8 8.8", G, G, 0.35, "round"),
                tone: "bio", keywords: ["crate", "biological", "cargo"]),
           icon("bio", "Biological", "life-support", "Biological material or process.",
-               circle(9.5, 9, 1.3, D) +
-               path("M9.5 7.4C7 7.4 5.5 6.3 5.1 4.3C7.4 3.9 9 5.1 9.5 7.4Z", G) +
-               path("M8.1 9.8C6.8 12 5.3 12.8 3.5 12C4.3 9.8 6 9 8.1 9.8Z", G) +
-               path("M10.9 9.8C12.2 12 13.7 12.8 15.5 12C14.7 9.8 13 9 10.9 9.8Z", G),
+               path("M4.8 13C5 7.4 8.1 4.1 14.2 4.2C14 9.8 10.8 13 4.8 13Z", G) +
+               path("M5.4 12.4L12.8 5.6", "none", D, 0.9, "round"),
                tone: "bio", keywords: ["organic", "cell", "biology"]),
           icon("medical", "Medical", "medical", "Medical care or first-aid station.",
                rect(8, 4, 3, 10, G, 0.35) + rect(4.5, 7.5, 10, 3, G, 0.35),
                tone: "bio", keywords: ["cross", "health", "first aid"]),
           icon("navigation", "Navigation", "operations", "Navigation and route-planning station.",
-               circle(9.5, 9, 5.1, D) + circle(9.5, 9, 3.8, PLATE) +
-               polygon("10.5 5.2 8.5 9.4 10.5 12.8 11.3 8.6", B) + circle(9.5, 9, 0.65, P),
+               circle(9.5, 9, 4.8, "none", D, 1.1) +
+               polygon("9.5 4 11 9.3 9.5 8.7 8 9.3", B) +
+               polygon("9.5 14 8 8.7 9.5 9.3 11 8.7", D) +
+               circle(9.5, 9, 0.65, P),
                tone: "cold", keywords: ["compass", "route", "heading"]),
           icon("communications", "Communications", "communications", "Radio or network communications.",
                rect(8.6, 8, 1.8, 5.5, D, 0.5) + circle(9.5, 7.1, 1.25, P) +
@@ -332,14 +334,15 @@ module Cargo19
                line(10.6, 10.6, 12.8, 10.6, P, 0.65),
                tone: "cold", keywords: ["storage", "database", "telemetry"]),
           icon("location", "Location", "wayfinding", "Mapped location or destination.",
-               path("M9.5 3.7A4.3 4.3 0 0 0 5.2 8C5.2 11.2 9.5 14.6 9.5 14.6S13.8 11.2 13.8 8A4.3 4.3 0 0 0 9.5 3.7Z", D) +
-               circle(9.5, 8, 1.55, PLATE),
+               path("M9.5 3.8A4.1 4.1 0 0 0 5.4 7.9C5.4 11 9.5 14.3 9.5 14.3S13.6 11 13.6 7.9A4.1 4.1 0 0 0 9.5 3.8Z",
+                    "none", D, 1.3, "round", "round") +
+               circle(9.5, 7.9, 1.05, B),
                keywords: ["pin", "map", "destination"]),
           icon("warning", "Warning beacon", "hazard", "Active warning beacon or alarm.",
-               path("M6.1 11.5L7.1 6.1C7.4 4.5 8.2 3.8 9.5 3.8S11.6 4.5 11.9 6.1L12.9 11.5Z", P) +
-               rect(5.2, 11.5, 8.6, 2, D, 0.4) + line(4.4, 5.1, 2.9, 4.2, D, 0.75, "round") +
-               line(14.6, 5.1, 16.1, 4.2, D, 0.75, "round") +
-               line(9.5, 2.9, 9.5, 1.8, D, 0.75, "round"),
+               path("M6.2 11.6L7.2 6.2C7.5 4.7 8.3 4 9.5 4S11.5 4.7 11.8 6.2L12.8 11.6Z", P) +
+               rect(5.1, 11.5, 8.8, 2, D, 0.35) +
+               line(4.5, 6, 3.1, 5.2, D, 0.85, "round") +
+               line(14.5, 6, 15.9, 5.2, D, 0.85, "round"),
                tone: "process", keywords: ["alarm", "beacon", "caution"])
         ].freeze
       end
@@ -491,8 +494,8 @@ module Cargo19
 
       def write_catalog
         catalog = {
-          name: "CARGO/19 icon catalog",
-          version: "1.3.0",
+          name: "CARGO/19 CSS icon catalog",
+          version: "1.3.1",
           viewBox: "0 0 19 18",
           construction: {
             grid: "19 × 18",
@@ -525,7 +528,7 @@ module Cargo19
         File.write(
           File.join(ICONS_DIR, "README.md"),
           <<~MARKDOWN
-            # CARGO/19 icon system
+            # CARGO/19 CSS icon system
 
             This directory is generated by `tools/build_icons.rb`. Equipment signs use a strict `19 × 18` viewBox, one fixed seven-color palette, and a common red frame/plate construction. Micro interface icons use the same viewBox and a consistent 1.5-unit stroke.
 
