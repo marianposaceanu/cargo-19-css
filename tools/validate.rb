@@ -121,6 +121,8 @@ module Cargo19
         report("every spacing utility used by the pages is defined")
         check_css
         report("CSS structure and version banners")
+        check_mobile_css_contract
+        report("mobile control alignment, touch targets, and overflow safeguards")
         check_javascript
         report("JavaScript structure and syntax")
         check_hashes
@@ -409,6 +411,20 @@ module Cargo19
           end
           fail!("Missing version banner in #{relative_path}") unless text.include?("CARGO/19 CSS v#{VERSION}")
         end
+      end
+
+      def check_mobile_css_contract
+        source = File.read(File.join(ROOT, "src", "50-components.css"), encoding: "UTF-8")
+        requirements = {
+          "non-shrinking icon buttons" => /\.c19-icon-button\s*\{[^}]*flex:\s*0 0 2\.75rem;/m,
+          "contained touch scrollers" => /\.c19-table-wrap,\s*\.c19-tabs__list,\s*\.c19-scroll-row,\s*\.c19-doc-code\s*\{[^}]*overscroll-behavior-inline:\s*contain;/m,
+          "top-row dismiss controls" => /\.c19-alert > :last-child,\s*\.c19-toast > :last-child\s*\{[^}]*grid-column:\s*auto;/m,
+          "mobile touch targets" => /\.c19-button--small\s*\{\s*min-block-size:\s*2\.75rem;/m,
+          "mobile command-bar sizing" => /\.c19-commandbar \.c19-input\s*\{[^}]*min-inline-size:\s*0;[^}]*flex:\s*1 1 8rem;/m,
+          "stacked mobile dialog actions" => /\.c19-dialog__footer\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\);/m
+        }
+        missing = requirements.reject { |_label, pattern| source.match?(pattern) }.keys
+        fail!("Mobile CSS contract missing: #{missing.join(", ")}") unless missing.empty?
       end
 
       def check_javascript
