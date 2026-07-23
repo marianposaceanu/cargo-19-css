@@ -2,6 +2,7 @@
   "name": "cargo19-css",
   "version": "1.3.0",
   "description": "Independent retro-future CSS framework combining the original visual system with 59 generated semiotic icons and self-hosted documentation.",
+  "homepage": "https://marianposaceanu.github.io/cargo-19-css/",
   "style": "dist/cargo19.css",
   "main": "dist/cargo19.js",
   "files": [

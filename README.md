@@ -1,6 +1,8 @@
 # CARGO/19 CSS
 
-![CARGO/19 CSS preview](preview.png)
+[![CARGO/19 CSS preview](preview.png)](https://marianposaceanu.github.io/cargo-19-css/)
+
+[Open the live showcase and system manual →](https://marianposaceanu.github.io/cargo-19-css/)
 
 CARGO/19 is a small, dependency-free CSS framework for operational, retro-future interfaces. Version 1.3 consolidates the original 1.0 visual direction with the generated semiotic system, documentation, behaviors, and validation developed in 1.1 and 1.2.
 
