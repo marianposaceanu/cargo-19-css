@@ -218,7 +218,7 @@
   function setStream(enabled) {
     streamEnabled = enabled;
     if (streamToggle) streamToggle.checked = enabled;
-    setStatus("[data-c19-demo-stream-status]", enabled ? "ok" : "warn", enabled ? "Telemetry live" : "Telemetry paused");
+    setStatus("[data-c19-demo-stream-status]", enabled ? "ok" : "warn", enabled ? "Live" : "Paused");
     if (enabled && !document.hidden) startTelemetry();
     else stopTelemetry();
     addLog("telemetry --stream", enabled ? "stream resumed / live sampling active" : "stream paused / values held");

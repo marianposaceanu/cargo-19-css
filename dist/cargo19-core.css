@@ -2463,6 +2463,82 @@
   }
 }
 
+@layer c19.components {
+  /* Mobile integrity: keep controls reachable and overflow visibly contained. */
+  .c19-icon-button {
+    flex: 0 0 2.75rem;
+  }
+
+  .c19-table-wrap,
+  .c19-tabs__list,
+  .c19-scroll-row,
+  .c19-doc-code {
+    max-inline-size: 100%;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .c19-table-wrap {
+    inline-size: 100%;
+  }
+
+  @media (max-width: 42rem) {
+    .c19-alert,
+    .c19-toast {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+    }
+
+    .c19-alert > *,
+    .c19-toast > * {
+      min-inline-size: 0;
+    }
+
+    .c19-alert > :last-child,
+    .c19-toast > :last-child {
+      grid-column: auto;
+      align-self: start;
+    }
+
+    .c19-button--small {
+      min-block-size: 2.75rem;
+    }
+
+    .c19-commandbar {
+      min-inline-size: 0;
+      max-inline-size: 100%;
+    }
+
+    .c19-commandbar .c19-input {
+      min-inline-size: 0;
+      flex: 1 1 8rem;
+    }
+
+    .c19-commandbar > .c19-key {
+      display: none;
+    }
+
+    .c19-commandbar > :is(.c19-button, .c19-icon-button, .c19-terminal__prompt) {
+      flex: 0 0 auto;
+    }
+
+    .c19-dialog__header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+    }
+
+    .c19-dialog__footer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .c19-dialog__footer .c19-button {
+      inline-size: 100%;
+    }
+  }
+}
+
 @layer c19.utilities {
   .c19-sr-only { position: absolute !important; inline-size: 1px !important; block-size: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; clip-path: inset(50%) !important; white-space: nowrap !important; }
   .c19-text-muted { color: var(--c19-ink-muted) !important; }
