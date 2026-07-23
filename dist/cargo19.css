@@ -2307,6 +2307,7 @@
   .c19-showcase-meta {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    inline-size: min(100%, 72rem);
     gap: 1px;
     border: 1px solid var(--c19-border);
     background: var(--c19-border);
