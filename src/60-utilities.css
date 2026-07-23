@@ -28,9 +28,11 @@
   .c19-py-8 { padding-block: var(--c19-space-8) !important; }
   .c19-mt-2 { margin-block-start: var(--c19-space-2) !important; }
   .c19-mt-4 { margin-block-start: var(--c19-space-4) !important; }
+  .c19-mt-5 { margin-block-start: var(--c19-space-5) !important; }
   .c19-mt-6 { margin-block-start: var(--c19-space-6) !important; }
   .c19-mb-2 { margin-block-end: var(--c19-space-2) !important; }
   .c19-mb-4 { margin-block-end: var(--c19-space-4) !important; }
+  .c19-mb-5 { margin-block-end: var(--c19-space-5) !important; }
   .c19-mb-6 { margin-block-end: var(--c19-space-6) !important; }
   .c19-gap-1 { --c19-stack-gap: var(--c19-space-1); --c19-grid-gap: var(--c19-space-1); --c19-cluster-gap: var(--c19-space-1); }
   .c19-gap-2 { --c19-stack-gap: var(--c19-space-2); --c19-grid-gap: var(--c19-space-2); --c19-cluster-gap: var(--c19-space-2); }

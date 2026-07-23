@@ -113,6 +113,8 @@ module Cargo19
         report("12 themed framework-only HTML pages, embedded sprites, and local references")
         check_manual_contract
         report("manual coverage for components, motion, tokens, typography, and Safari icon delivery")
+        check_spacing_utilities
+        report("every spacing utility used by the pages is defined")
         check_css
         report("CSS structure and version banners")
         check_javascript
@@ -272,6 +274,16 @@ module Cargo19
           missing = snippets.reject { |snippet| text.include?(snippet) }
           fail!("Manual coverage missing from #{path}: #{missing}") unless missing.empty?
         end
+      end
+
+      def check_spacing_utilities
+        used = HTML_FILES.flat_map do |path|
+          File.read(path, encoding: "UTF-8").scan(/\bc19-(?:gap|m[bt])-\d+\b/)
+        end.to_set
+        source = Dir.glob(File.join(ROOT, "src", "*.css")).map { |path| File.read(path, encoding: "UTF-8") }.join("\n")
+        defined = source.scan(/\.((?:c19-(?:gap|m[bt])-\d+))\b/).flatten.to_set
+        missing = (used - defined).to_a.sort
+        fail!("Undefined spacing utilities used by HTML pages: #{missing.join(", ")}") unless missing.empty?
       end
 
       def strip_css_comments_and_strings(text)

@@ -21,6 +21,7 @@
 - Added explicit creator attribution and a semantic author link across the public site and package metadata.
 - Added a visible GitHub repository link to the homepage app bar on desktop and mobile.
 - Built dependency-free, idiomatic Ruby tooling for generation, release packaging, and validation.
+- Completed the spacing scale used by the manual and refined the creator attribution.
 
 ## 1.2.0 — 2026-07-21
 
