@@ -6,6 +6,8 @@
 
 CARGO/19 is a small, dependency-free CSS framework for operational, retro-future interfaces. Version 1.3 consolidates the original 1.0 visual direction with the generated semiotic system, documentation, behaviors, and validation developed in 1.1 and 1.2.
 
+Created by [Marian Posaceanu](https://marianposaceanu.com/).
+
 The package is an independent design study. It is not an official product tied to any film or studio, and it contains no film stills, logos, proprietary production artwork, or font binaries.
 
 ## What is included

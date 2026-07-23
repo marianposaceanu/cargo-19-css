@@ -18,6 +18,7 @@
 - Embedded the complete icon sprite in generated manual and example pages so Safari can render every glyph when the package is opened directly from disk.
 - Replaced atmospheric gradients with flat surfaces, hard signal bands, and solid loading motion.
 - Tightened the landing-page palette rail and bounded the vacuum-black swatch so every specified color remains visible.
+- Added explicit creator attribution and a semantic author link across the public site and package metadata.
 
 ## 1.2.0 — 2026-07-21
 
