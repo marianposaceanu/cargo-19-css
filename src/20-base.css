@@ -14,19 +14,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .c19-root::before {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    content: "";
-    background-image:
-      linear-gradient(var(--c19-grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--c19-grid) 1px, transparent 1px);
-    background-size: 1rem 1rem;
-    mask-image: linear-gradient(to bottom, black 0%, rgb(0 0 0 / 0.88) 36%, transparent 92%);
-  }
-
   .c19-root :where(h1, h2, h3, h4) {
     color: var(--c19-ink);
     font-family: var(--c19-font-display);

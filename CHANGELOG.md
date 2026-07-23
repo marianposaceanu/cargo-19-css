@@ -16,6 +16,7 @@
 - Added a one-shot, mirrored signal-acquisition title cue with a static reduced-motion state.
 - Expanded the manual with live component examples, a component-variable reference, richer typography specimens, and corrected light-specimen token contrast.
 - Embedded the complete icon sprite in generated manual and example pages so Safari can render every glyph when the package is opened directly from disk.
+- Replaced atmospheric gradients with flat surfaces, hard signal bands, and solid loading motion.
 
 ## 1.2.0 — 2026-07-21
 
