@@ -1,0 +1,20 @@
+@layer c19.reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(html) {
+    min-block-size: 100%;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    tab-size: 2;
+  }
+  :where(body) { min-block-size: 100%; }
+  :where(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) { margin: 0; }
+  :where(ul[role="list"], ol[role="list"]) { list-style: none; margin: 0; padding: 0; }
+  :where(img, picture, svg, canvas, video) { display: block; max-inline-size: 100%; }
+  :where(button, input, textarea, select) { color: inherit; font: inherit; }
+  :where(button, [role="button"]) { touch-action: manipulation; }
+  :where(textarea:not([rows])) { min-block-size: 8em; }
+  :where(table) { border-collapse: collapse; border-spacing: 0; }
+  :where(a:not([class])) { color: currentColor; text-decoration-skip-ink: auto; }
+  :where(:target) { scroll-margin-block: 5rem; }
+}

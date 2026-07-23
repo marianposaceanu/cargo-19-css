@@ -1,0 +1,45 @@
+{
+  "name": "cargo19-css",
+  "version": "1.3.0",
+  "description": "Independent retro-future CSS framework combining the original visual system with 59 generated semiotic icons and self-hosted documentation.",
+  "style": "dist/cargo19.css",
+  "main": "dist/cargo19.js",
+  "files": [
+    "dist",
+    "src",
+    "icons",
+    "docs",
+    "examples",
+    "tools",
+    "index.html",
+    "README.md",
+    "DIST-SHA256.txt",
+    "COMPONENTS.md",
+    "FONT-SOURCES.md",
+    "NOTICE.md",
+    "CHANGELOG.md",
+    "manifest.json",
+    "LICENSE",
+    "preview.png"
+  ],
+  "scripts": {
+    "build": "ruby tools/release.rb",
+    "build:css": "ruby tools/build.rb",
+    "build:icons": "ruby tools/build_icons.rb",
+    "build:docs": "ruby tools/build_docs.rb",
+    "validate": "ruby tools/validate.rb"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "design-system",
+    "semiotic",
+    "icons",
+    "operational-ui",
+    "sci-fi"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "*.css"
+  ]
+}

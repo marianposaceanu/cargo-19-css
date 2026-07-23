@@ -1,0 +1,57 @@
+@layer c19.base {
+  ::selection { background: var(--c19-selection); }
+
+  .c19-root {
+    min-block-size: 100dvh;
+    overflow-x: clip;
+    isolation: isolate;
+    background: var(--c19-bg);
+    color: var(--c19-ink);
+    font-family: var(--c19-font-sans);
+    font-size: var(--c19-text-md);
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .c19-root::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    background-image:
+      linear-gradient(var(--c19-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--c19-grid) 1px, transparent 1px);
+    background-size: 1rem 1rem;
+    mask-image: linear-gradient(to bottom, black 0%, rgb(0 0 0 / 0.88) 36%, transparent 92%);
+  }
+
+  .c19-root :where(h1, h2, h3, h4) {
+    color: var(--c19-ink);
+    font-family: var(--c19-font-display);
+    font-weight: 900;
+  }
+  .c19-root :where(a) { color: var(--c19-cold-blue); text-underline-offset: 0.18em; }
+  .c19-root :where(code, kbd, samp, pre) { font-family: var(--c19-font-mono); }
+  .c19-root :where(hr) { border: 0; border-block-start: var(--c19-line) solid var(--c19-border); }
+  .c19-root :where(:focus-visible) { outline: 3px solid var(--c19-focus); outline-offset: 3px; }
+  .c19-root :where([hidden]) { display: none !important; }
+
+  .c19-skip-link {
+    position: fixed;
+    inset-block-start: var(--c19-space-3);
+    inset-inline-start: var(--c19-space-3);
+    z-index: 100;
+    transform: translateY(-180%);
+    background: var(--c19-signal-red);
+    color: var(--c19-on-red) !important;
+    padding: var(--c19-space-3) var(--c19-space-4);
+    font-family: var(--c19-font-label);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .c19-skip-link:focus { transform: translateY(0); }
+}

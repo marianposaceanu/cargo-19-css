@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" data-c19-theme="bridge">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CARGO/19 CSS — an independent retro-future interface framework inspired by industrial semiotics and 1970s science-fiction typography.">
+  <title>CARGO/19 CSS — consolidated component reference</title>
+  <link rel="stylesheet" href="dist/cargo19.css">
+</head>
+<body class="c19-root">
+<!-- C19_INLINE_SPRITE_START -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+  <defs>
+    <symbol id="c19-pressurized" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="pressurized"><rect x="6" y="4" width="7" height="10" fill="#0f0e09" rx="2"/><rect x="7.25" y="5.25" width="4.5" height="7.5" fill="#e5e8f1" rx="1.2"/><rect x="8.75" y="3.5" width="1.5" height="1.5" fill="#e76c1a" rx="0.35"/><path d="M7.6 9L11.4 9" fill="none" stroke="#0f0e09" stroke-width="0.9" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-gravity" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="gravity"><path d="M4.5 5H14.5V7H11V10H13L9.5 13.5L6 10H8V7H4.5Z" fill="#0f0e09"/></g></symbol>
+    <symbol id="c19-gravity-off" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="gravity-off"><path d="M5 5H14V6.8H10.7V9.2H12.6L9.5 12.4L6.4 9.2H8.3V6.8H5Z" fill="#847a73"/><path d="M4.4 13.3L14.6 4.7" fill="none" stroke="#e76c1a" stroke-width="1.25" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-cryogenic" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="cryogenic"><g><path d="M9.5 4.5L9.5 13.5" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M5.6 6.75L13.4 11.25" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M5.6 11.25L13.4 6.75" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M8.2 5.5L9.5 6.4" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M10.8 5.5L9.5 6.4" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M8.2 12.5L9.5 11.6" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M10.8 12.5L9.5 11.6" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/></g><rect x="3.8" y="5.2" width="1.2" height="7.6" fill="#0f0e09" rx="0.6"/><circle cx="4.4" cy="12.6" r="1.35" fill="#2f3795"/></g></symbol>
+    <symbol id="c19-airlock" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="airlock"><rect x="4.4" y="4" width="4.4" height="10" fill="#0f0e09" rx="0.45"/><rect x="10.2" y="4" width="4.4" height="10" fill="#0f0e09" rx="0.45"/><rect x="5.3" y="5" width="2.6" height="8" fill="#e5e8f1" rx="0.25"/><rect x="11.1" y="5" width="2.6" height="8" fill="#e5e8f1" rx="0.25"/><polygon points="7 8 8.2 9 7 10" fill="#e76c1a"/><polygon points="12 8 10.8 9 12 10" fill="#e76c1a"/></g></symbol>
+    <symbol id="c19-bulkhead" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="bulkhead"><rect x="4.2" y="4" width="10.6" height="10" fill="#0f0e09" rx="1"/><rect x="5.4" y="5.2" width="8.2" height="7.6" fill="#e5e8f1" rx="0.45"/><path d="M5.4 9L13.6 9" fill="none" stroke="#847a73" stroke-width="1" stroke-linecap="square"/><path d="M9.5 5.2L9.5 12.8" fill="none" stroke="#847a73" stroke-width="1" stroke-linecap="square"/><circle cx="9.5" cy="9" r="1.1" fill="#e76c1a"/></g></symbol>
+    <symbol id="c19-vacuum" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="vacuum"><circle cx="9.5" cy="9" r="5.2" fill="#0f0e09"/><circle cx="9.5" cy="9" r="3.45" fill="#e5e8f1"/><circle cx="7.2" cy="7.3" r="0.55" fill="#0f0e09"/><circle cx="11.8" cy="10.8" r="0.7" fill="#0f0e09"/><circle cx="10.9" cy="6.7" r="0.38" fill="#0f0e09"/></g></symbol>
+    <symbol id="c19-suit" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="suit"><g><circle cx="9.5" cy="5.6" r="2.05" fill="#0f0e09"/><rect x="7.2" y="7.35" width="4.6" height="4.4" fill="#0f0e09" rx="0.65"/><rect x="5.55" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="11.75" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="7.15" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="9.95" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="8.25" y="4.9" width="2.5" height="1.2" fill="#e5e8f1" rx="0.5"/></g></g></symbol>
+    <symbol id="c19-optics" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="optics"><path d="M3.7 9C5.4 6.1 7.4 4.8 9.5 4.8S13.6 6.1 15.3 9C13.6 11.9 11.6 13.2 9.5 13.2S5.4 11.9 3.7 9Z" fill="#0f0e09"/><circle cx="9.5" cy="9" r="2.3" fill="#e5e8f1"/><circle cx="9.5" cy="9" r="1.1" fill="#2f3795"/></g></symbol>
+    <symbol id="c19-laser" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="laser"><rect x="4" y="7.3" width="4.2" height="3.4" fill="#0f0e09" rx="0.35"/><polygon points="8.2 7.8 15 5.2 15 12.8 8.2 10.2" fill="#e76c1a"/><rect x="5.1" y="8.2" width="2" height="1.6" fill="#e5e8f1" rx="0.2"/></g></symbol>
+    <symbol id="c19-power" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="power"><polygon points="10.4 3.8 5.9 9.6 9.1 9.6 8.4 14.2 13.3 8.2 10.1 8.2" fill="#e76c1a"/></g></symbol>
+    <symbol id="c19-hazard" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="hazard"><polygon points="9.5 3.7 15.1 13.5 3.9 13.5" fill="#e76c1a"/><rect x="8.75" y="6.4" width="1.5" height="4.2" fill="#0f0e09" rx="0.3"/><circle cx="9.5" cy="12" r="0.8" fill="#0f0e09"/></g></symbol>
+    <symbol id="c19-suit-required" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="suit-required"><g><circle cx="9.5" cy="5.6" r="2.05" fill="#0f0e09"/><rect x="7.2" y="7.35" width="4.6" height="4.4" fill="#0f0e09" rx="0.65"/><rect x="5.55" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="11.75" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="7.15" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="9.95" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="8.25" y="4.9" width="2.5" height="1.2" fill="#e5e8f1" rx="0.5"/></g><rect x="12.5" y="3.5" width="2.5" height="2.5" fill="#e76c1a" rx="0.35"/><path d="M13.1 4.8L13.8 5.4L14.6 4.3" fill="none" stroke="#ffffff" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-suit-required-zero-g" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="suit-required-zero-g"><g><circle cx="9.5" cy="5.6" r="2.05" fill="#0f0e09"/><rect x="7.2" y="7.35" width="4.6" height="4.4" fill="#0f0e09" rx="0.65"/><rect x="5.55" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="11.75" y="7.75" width="1.7" height="4.6" fill="#0f0e09" rx="0.45"/><rect x="7.15" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="9.95" y="11.2" width="1.9" height="2.5" fill="#0f0e09" rx="0.35"/><rect x="8.25" y="4.9" width="2.5" height="1.2" fill="#e5e8f1" rx="0.5"/></g><circle cx="4.4" cy="5" r="0.65" fill="#e76c1a"/><circle cx="14.6" cy="7.2" r="0.48" fill="#e76c1a"/><circle cx="4.8" cy="12.6" r="0.42" fill="#e76c1a"/></g></symbol>
+    <symbol id="c19-thermal" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="thermal"><rect x="8.2" y="4.2" width="2.6" height="7.4" fill="#0f0e09" rx="1.3"/><circle cx="9.5" cy="12.3" r="2.05" fill="#e76c1a"/><rect x="9" y="6" width="1" height="6.4" fill="#e76c1a" rx="0.5"/><path d="M12.2 5.3L14.5 5.3" fill="none" stroke="#e76c1a" stroke-width="0.8" stroke-linecap="square"/><path d="M12.2 7.7L13.8 7.7" fill="none" stroke="#e76c1a" stroke-width="0.8" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-radiation-shield" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="radiation-shield"><path d="M9.5 3.5L14.5 5.3V8.8C14.5 11.7 12.6 13.7 9.5 14.5C6.4 13.7 4.5 11.7 4.5 8.8V5.3Z" fill="#0f0e09"/><g transform="translate(2.35 2.25) scale(.75)"><g><circle cx="9.5" cy="9" r="1.05" fill="#e76c1a"/><path d="M9.5 7.2A3.4 3.4 0 0 0 6.6 5.5L8 3.6A5.8 5.8 0 0 1 11 3.6L12.4 5.5A3.4 3.4 0 0 0 9.5 7.2Z" fill="#e76c1a"/><path d="M8 10.2A3.4 3.4 0 0 0 5.1 11.9L3.9 9.8A5.8 5.8 0 0 1 5.4 7.2L7.7 8.1A3.4 3.4 0 0 0 8 10.2Z" fill="#e76c1a"/><path d="M11 10.2A3.4 3.4 0 0 1 13.9 11.9L15.1 9.8A5.8 5.8 0 0 0 13.6 7.2L11.3 8.1A3.4 3.4 0 0 1 11 10.2Z" fill="#e76c1a"/></g></g></g></symbol>
+    <symbol id="c19-radiation" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="radiation"><g><circle cx="9.5" cy="9" r="1.05" fill="#e76c1a"/><path d="M9.5 7.2A3.4 3.4 0 0 0 6.6 5.5L8 3.6A5.8 5.8 0 0 1 11 3.6L12.4 5.5A3.4 3.4 0 0 0 9.5 7.2Z" fill="#e76c1a"/><path d="M8 10.2A3.4 3.4 0 0 0 5.1 11.9L3.9 9.8A5.8 5.8 0 0 1 5.4 7.2L7.7 8.1A3.4 3.4 0 0 0 8 10.2Z" fill="#e76c1a"/><path d="M11 10.2A3.4 3.4 0 0 1 13.9 11.9L15.1 9.8A5.8 5.8 0 0 0 13.6 7.2L11.3 8.1A3.4 3.4 0 0 1 11 10.2Z" fill="#e76c1a"/></g></g></symbol>
+    <symbol id="c19-radiation-high" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="radiation-high"><g transform="translate(-.8 0) scale(.92)"><g><circle cx="9.5" cy="9" r="1.05" fill="#e76c1a"/><path d="M9.5 7.2A3.4 3.4 0 0 0 6.6 5.5L8 3.6A5.8 5.8 0 0 1 11 3.6L12.4 5.5A3.4 3.4 0 0 0 9.5 7.2Z" fill="#e76c1a"/><path d="M8 10.2A3.4 3.4 0 0 0 5.1 11.9L3.9 9.8A5.8 5.8 0 0 1 5.4 7.2L7.7 8.1A3.4 3.4 0 0 0 8 10.2Z" fill="#e76c1a"/><path d="M11 10.2A3.4 3.4 0 0 1 13.9 11.9L15.1 9.8A5.8 5.8 0 0 0 13.6 7.2L11.3 8.1A3.4 3.4 0 0 1 11 10.2Z" fill="#e76c1a"/></g></g><polygon points="13.1 5 15 7 13.1 9" fill="#0f0e09"/><polygon points="13.1 9 15 11 13.1 13" fill="#0f0e09"/></g></symbol>
+    <symbol id="c19-refrigerator" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="refrigerator"><rect x="4.4" y="3.8" width="10.2" height="10.4" fill="#0f0e09" rx="0.8"/><rect x="5.6" y="5" width="7.8" height="8" fill="#e5e8f1" rx="0.35"/><g transform="translate(2.3 2.1) scale(.75)"><g><path d="M9.5 4.5L9.5 13.5" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M5.6 6.75L13.4 11.25" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M5.6 11.25L13.4 6.75" fill="none" stroke="#2f3795" stroke-width="1.2" stroke-linecap="round"/><path d="M8.2 5.5L9.5 6.4" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M10.8 5.5L9.5 6.4" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M8.2 12.5L9.5 11.6" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/><path d="M10.8 12.5L9.5 11.6" fill="none" stroke="#2f3795" stroke-width="0.8" stroke-linecap="round"/></g></g><rect x="12.1" y="5.7" width="0.6" height="2.5" fill="#2f3795" rx="0.3"/></g></symbol>
+    <symbol id="c19-direction" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="direction"><path d="M4 7.3H10.2V4.4L15.4 9L10.2 13.6V10.7H4Z" fill="#0f0e09"/></g></symbol>
+    <symbol id="c19-life-support" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="life-support"><circle cx="9.5" cy="9" r="4.9" fill="#0f0e09"/><path d="M9.5 12.7C6.4 11.5 5.4 8.7 6.4 5.7C8.7 6.2 9.9 7.5 9.5 12.7Z" fill="#3f5f2d"/><path d="M9.5 12.7C12.6 11.5 13.6 8.7 12.6 5.7C10.3 6.2 9.1 7.5 9.5 12.7Z" fill="#3f5f2d"/><path d="M9.5 7L9.5 13" fill="none" stroke="#e5e8f1" stroke-width="0.65" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-galley" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="galley"><circle cx="9.2" cy="9" r="3.8" fill="#0f0e09"/><circle cx="9.2" cy="9" r="2.55" fill="#e5e8f1"/><rect x="3.8" y="5.1" width="0.7" height="7.8" fill="#0f0e09" rx="0.25"/><rect x="14.2" y="5.1" width="0.7" height="7.8" fill="#0f0e09" rx="0.25"/><path d="M13.6 5.1L15.2 5.1" fill="none" stroke="#0f0e09" stroke-width="0.65" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-coffee" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="coffee"><path d="M5.2 7H12.6V11.5C12.6 13 11.5 14 10 14H7.8C6.3 14 5.2 13 5.2 11.5Z" fill="#0f0e09"/><path d="M12.5 8.1H14.1C15.1 8.1 15.4 9 15.4 10S15.1 11.9 14.1 11.9H12.6" fill="none" stroke="#0f0e09" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 6C6.4 5.1 7.6 4.5 7 3.7M10 6C9.4 5.1 10.6 4.5 10 3.7" fill="none" stroke="#e76c1a" stroke-width="0.85" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-bridge" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="bridge"><rect x="3.8" y="5" width="11.4" height="8.5" fill="#0f0e09" rx="0.75"/><rect x="5" y="6.2" width="4" height="2.7" fill="#2f3795" rx="0.25"/><rect x="10" y="6.2" width="4" height="2.7" fill="#e5e8f1" rx="0.25"/><circle cx="6" cy="11.3" r="0.65" fill="#e76c1a"/><circle cx="8.3" cy="11.3" r="0.65" fill="#3f5f2d"/><rect x="10.1" y="10.7" width="3.8" height="1.2" fill="#847a73" rx="0.2"/></g></symbol>
+    <symbol id="c19-autodoc" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="autodoc"><rect x="4" y="8.8" width="11" height="4.2" fill="#0f0e09" rx="0.45"/><circle cx="6" cy="7.3" r="1.35" fill="#0f0e09"/><rect x="7.3" y="7" width="5.6" height="1.8" fill="#0f0e09" rx="0.6"/><rect x="11.6" y="3.7" width="1.2" height="4.2" fill="#3f5f2d" rx="0.2"/><rect x="10.1" y="5.2" width="4.2" height="1.2" fill="#3f5f2d" rx="0.2"/></g></symbol>
+    <symbol id="c19-computer" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="computer"><rect x="4" y="4.3" width="11" height="7.4" fill="#0f0e09" rx="0.65"/><rect x="5.2" y="5.5" width="8.6" height="4.9" fill="#e5e8f1" rx="0.25"/><rect x="8.8" y="11.3" width="1.4" height="1.5" fill="#0f0e09"/><rect x="6.6" y="12.6" width="5.8" height="1" fill="#0f0e09" rx="0.2"/><rect x="6.2" y="6.5" width="1.2" height="1.2" fill="#2f3795" rx="0.15"/><rect x="8.1" y="6.5" width="4.6" height="0.65" fill="#847a73" rx="0.15"/><rect x="6.2" y="8.2" width="6.5" height="0.65" fill="#e76c1a" rx="0.15"/></g></symbol>
+    <symbol id="c19-repair" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="repair"><path d="M12.7 4.1A3.2 3.2 0 0 0 9 8L4.4 12.6L6.4 14.6L11 10A3.2 3.2 0 0 0 14.9 6.3L12.8 8.4L10.6 6.2Z" fill="#0f0e09"/><circle cx="5.7" cy="13.3" r="0.6" fill="#e5e8f1"/></g></symbol>
+    <symbol id="c19-ladder" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="ladder"><path d="M6 4L6 14" fill="none" stroke="#0f0e09" stroke-width="1.4" stroke-linecap="square"/><path d="M13 4L13 14" fill="none" stroke="#0f0e09" stroke-width="1.4" stroke-linecap="square"/><path d="M6 5.5L13 5.5" fill="none" stroke="#847a73" stroke-width="1.1" stroke-linecap="square"/><path d="M6 8L13 8" fill="none" stroke="#847a73" stroke-width="1.1" stroke-linecap="square"/><path d="M6 10.5L13 10.5" fill="none" stroke="#847a73" stroke-width="1.1" stroke-linecap="square"/><path d="M6 13L13 13" fill="none" stroke="#847a73" stroke-width="1.1" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-intercom" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="intercom"><polygon points="4.2 7 7.2 7 11.7 4.3 11.7 13.7 7.2 11 4.2 11" fill="#0f0e09"/><path d="M13 7C14 7.7 14 10.3 13 11" fill="none" stroke="#e76c1a" stroke-width="1.05" stroke-linecap="round"/><path d="M14.4 5.8C16.2 7.2 16.2 10.8 14.4 12.2" fill="none" stroke="#e76c1a" stroke-width="0.9" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-storage-nonorganic" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="storage-nonorganic"><polygon points="4 6.2 9.5 3.8 15 6.2 9.5 8.6" fill="#847a73"/><polygon points="4 6.2 9.5 8.6 9.5 14.2 4 11.8" fill="#0f0e09"/><polygon points="15 6.2 9.5 8.6 9.5 14.2 15 11.8" fill="#847a73"/><circle cx="7" cy="10.1" r="0.75" fill="#e5e8f1"/></g></symbol>
+    <symbol id="c19-storage-organic" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="storage-organic"><polygon points="4 6.2 9.5 3.8 15 6.2 9.5 8.6" fill="#847a73"/><polygon points="4 6.2 9.5 8.6 9.5 14.2 4 11.8" fill="#0f0e09"/><polygon points="15 6.2 9.5 8.6 9.5 14.2 15 11.8" fill="#847a73"/><path d="M6.2 11.2C6.4 8.9 8.1 8 9.3 8.2C9.2 10.2 8 11.4 6.2 11.2ZM7 10.7L8.8 8.8" fill="#3f5f2d" stroke="#3f5f2d" stroke-width="0.35" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-bio" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="bio"><circle cx="9.5" cy="9" r="1.3" fill="#0f0e09"/><path d="M9.5 7.4C7 7.4 5.5 6.3 5.1 4.3C7.4 3.9 9 5.1 9.5 7.4Z" fill="#3f5f2d"/><path d="M8.1 9.8C6.8 12 5.3 12.8 3.5 12C4.3 9.8 6 9 8.1 9.8Z" fill="#3f5f2d"/><path d="M10.9 9.8C12.2 12 13.7 12.8 15.5 12C14.7 9.8 13 9 10.9 9.8Z" fill="#3f5f2d"/></g></symbol>
+    <symbol id="c19-medical" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="medical"><rect x="8" y="4" width="3" height="10" fill="#3f5f2d" rx="0.35"/><rect x="4.5" y="7.5" width="10" height="3" fill="#3f5f2d" rx="0.35"/></g></symbol>
+    <symbol id="c19-navigation" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="navigation"><circle cx="9.5" cy="9" r="5.1" fill="#0f0e09"/><circle cx="9.5" cy="9" r="3.8" fill="#e5e8f1"/><polygon points="10.5 5.2 8.5 9.4 10.5 12.8 11.3 8.6" fill="#2f3795"/><circle cx="9.5" cy="9" r="0.65" fill="#e76c1a"/></g></symbol>
+    <symbol id="c19-communications" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="communications"><rect x="8.6" y="8" width="1.8" height="5.5" fill="#0f0e09" rx="0.5"/><circle cx="9.5" cy="7.1" r="1.25" fill="#e76c1a"/><path d="M7.4 5.2C5.6 6.8 5.6 9.2 7.4 10.8" fill="none" stroke="#0f0e09" stroke-width="1.05" stroke-linecap="round"/><path d="M11.6 5.2C13.4 6.8 13.4 9.2 11.6 10.8" fill="none" stroke="#0f0e09" stroke-width="1.05" stroke-linecap="round"/><path d="M5.7 3.7C2.8 6.2 2.8 9.8 5.7 12.3" fill="none" stroke="#847a73" stroke-width="0.85" stroke-linecap="round"/><path d="M13.3 3.7C16.2 6.2 16.2 9.8 13.3 12.3" fill="none" stroke="#847a73" stroke-width="0.85" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-cargo" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="cargo"><polygon points="4 6.2 9.5 3.8 15 6.2 9.5 8.6" fill="#e76c1a"/><polygon points="4 6.2 9.5 8.6 9.5 14.2 4 11.8" fill="#0f0e09"/><polygon points="15 6.2 9.5 8.6 9.5 14.2 15 11.8" fill="#847a73"/><path d="M9.5 8.6L9.5 14.2" fill="none" stroke="#e5e8f1" stroke-width="0.55" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-data" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="data"><rect x="4" y="5" width="2.2" height="8" fill="#0f0e09" rx="0.35"/><rect x="8.4" y="3.8" width="2.2" height="10.4" fill="#2f3795" rx="0.35"/><rect x="12.8" y="6.5" width="2.2" height="6.5" fill="#847a73" rx="0.35"/><path d="M6.2 7.1L8.4 7.1" fill="none" stroke="#e76c1a" stroke-width="0.65" stroke-linecap="square"/><path d="M10.6 10.6L12.8 10.6" fill="none" stroke="#e76c1a" stroke-width="0.65" stroke-linecap="square"/></g></symbol>
+    <symbol id="c19-location" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="location"><path d="M9.5 3.7A4.3 4.3 0 0 0 5.2 8C5.2 11.2 9.5 14.6 9.5 14.6S13.8 11.2 13.8 8A4.3 4.3 0 0 0 9.5 3.7Z" fill="#0f0e09"/><circle cx="9.5" cy="8" r="1.55" fill="#e5e8f1"/></g></symbol>
+    <symbol id="c19-warning" viewBox="0 0 19 18"><rect x=".5" y=".5" width="18" height="17" rx="3" fill="#ed2024" stroke="#ffffff" stroke-width=".75"/><rect x="2.5" y="2.5" width="14" height="13" rx="1" fill="#e5e8f1" stroke="#ffffff" stroke-width=".6"/><g data-c19-glyph="warning"><path d="M6.1 11.5L7.1 6.1C7.4 4.5 8.2 3.8 9.5 3.8S11.6 4.5 11.9 6.1L12.9 11.5Z" fill="#e76c1a"/><rect x="5.2" y="11.5" width="8.6" height="2" fill="#0f0e09" rx="0.4"/><path d="M4.4 5.1L2.9 4.2" fill="none" stroke="#0f0e09" stroke-width="0.75" stroke-linecap="round"/><path d="M14.6 5.1L16.1 4.2" fill="none" stroke="#0f0e09" stroke-width="0.75" stroke-linecap="round"/><path d="M9.5 2.9L9.5 1.8" fill="none" stroke="#0f0e09" stroke-width="0.75" stroke-linecap="round"/></g></symbol>
+    <symbol id="c19-check" viewBox="0 0 19 18"><g data-c19-glyph="check"><path d="M4.2 9.2L7.7 12.5L14.8 5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-close" viewBox="0 0 19 18"><g data-c19-glyph="close"><path d="M4.8 4.3L14.2 13.7M14.2 4.3L4.8 13.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-arrow-left" viewBox="0 0 19 18"><g data-c19-glyph="arrow-left"><path d="M14.5 9H4.5M8.3 5.2L4.5 9L8.3 12.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-arrow-right" viewBox="0 0 19 18"><g data-c19-glyph="arrow-right"><path d="M4.5 9H14.5M10.7 5.2L14.5 9L10.7 12.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-arrow-up" viewBox="0 0 19 18"><g data-c19-glyph="arrow-up"><path d="M9.5 14V4M5.7 7.8L9.5 4L13.3 7.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-arrow-down" viewBox="0 0 19 18"><g data-c19-glyph="arrow-down"><path d="M9.5 4V14M5.7 10.2L9.5 14L13.3 10.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-menu" viewBox="0 0 19 18"><g data-c19-glyph="menu"><path d="M4 5H15M4 9H15M4 13H15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-search" viewBox="0 0 19 18"><g data-c19-glyph="search"><path d="M8.2 4A4.2 4.2 0 1 0 8.2 12.4A4.2 4.2 0 1 0 8.2 4ZM11.4 11.7L15 15.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-settings" viewBox="0 0 19 18"><g data-c19-glyph="settings"><circle cx="9.5" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 3.1V5M9.5 13V14.9M3.6 9H5.5M13.5 9H15.4M5.3 4.8L6.7 6.2M12.3 11.8L13.7 13.2M13.7 4.8L12.3 6.2M6.7 11.8L5.3 13.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-user" viewBox="0 0 19 18"><g data-c19-glyph="user"><circle cx="9.5" cy="6.1" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.6 14.5C5.2 11.8 7 10.4 9.5 10.4S13.8 11.8 14.4 14.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-lock" viewBox="0 0 19 18"><g data-c19-glyph="lock"><rect x="4.5" y="8" width="10" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.7 8V5.7A2.8 2.8 0 0 1 9.5 2.9A2.8 2.8 0 0 1 12.3 5.7V8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-unlock" viewBox="0 0 19 18"><g data-c19-glyph="unlock"><rect x="4.5" y="8" width="10" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12.3 8V5.7A2.8 2.8 0 0 0 6.7 5.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-oxygen" viewBox="0 0 19 18"><g data-c19-glyph="oxygen"><circle cx="8.2" cy="8.6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12.2 10.5C12.2 9.7 12.9 9.2 13.8 9.2C14.7 9.2 15.3 9.7 15.3 10.5C15.3 11.3 14.8 11.8 13.8 12.4L12.2 13.5H15.4" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-shield" viewBox="0 0 19 18"><g data-c19-glyph="shield"><path d="M9.5 3L14.3 4.8V8.7C14.3 11.7 12.5 13.8 9.5 15C6.5 13.8 4.7 11.7 4.7 8.7V4.8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-light" viewBox="0 0 19 18"><g data-c19-glyph="light"><circle cx="9.5" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7.6 11.2V13.1H11.4V11.2M7.9 15H11.1M9.5 1.8V3M3.4 4L4.5 5M15.6 4L14.5 5M2.7 9H4M15 9H16.3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-clock" viewBox="0 0 19 18"><g data-c19-glyph="clock"><circle cx="9.5" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 5.4V9L12.2 10.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-plus" viewBox="0 0 19 18"><g data-c19-glyph="plus"><path d="M9.5 4V14M4.5 9H14.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-minus" viewBox="0 0 19 18"><g data-c19-glyph="minus"><path d="M4.5 9H14.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="miter"/></g></symbol>
+    <symbol id="c19-copy" viewBox="0 0 19 18"><g data-c19-glyph="copy"><rect x="6.2" y="5.2" width="8" height="9" rx=".8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12.2 5.2V3.5H4.8V12H6.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/></g></symbol>
+    <symbol id="c19-external-link" viewBox="0 0 19 18"><g data-c19-glyph="external-link"><path d="M10.5 3.5H15.5V8.5M15.1 3.9L8.7 10.3M13.5 10.2V14.5H4.5V5.5H8.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+  </defs>
+</svg>
+<!-- C19_INLINE_SPRITE_END -->
+<header class="c19-appbar c19-no-print">
+  <div class="c19-container c19-container--wide c19-appbar__inner">
+    <a class="c19-brand" href="#main"><span class="c19-brand__mark">19</span><span>CARGO/19 CSS</span></a>
+    <div class="c19-cluster">
+      <span class="c19-status c19-status--ok">v1.3.0</span>
+      <button class="c19-button c19-button--secondary c19-button--small" type="button" data-c19-theme-toggle aria-label="Switch to paper theme">Theme: <span data-c19-theme-label>Bridge</span></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="c19-showcase-hero">
+    <div class="c19-container c19-container--wide c19-stack" style="--c19-stack-gap:2rem">
+      <p class="c19-kicker">Independent interface standard / 19 × 18 unit system</p>
+      <h1 class="c19-title-reveal c19-signal-acquire" aria-label="Cargo nineteen"><span style="--i:0">C</span><span style="--i:1">A</span><span style="--i:2">R</span><span style="--i:3">G</span><span style="--i:3">O</span><span style="--i:2">&nbsp;</span><span style="--i:1">1</span><span style="--i:0">9</span></h1>
+      <p class="c19-lede">A small, modern CSS framework for industrial interfaces: sharp hierarchy, rounded semiotic modules, high-visibility status color, segmented data displays, and restrained motion.</p>
+      <div class="c19-cluster">
+        <a class="c19-button" href="#components">View components <svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-down"></use></svg></a>
+        <a class="c19-button c19-button--secondary" href="docs/index.html">Read the manual</a>
+      </div>
+      <div class="c19-showcase-meta">
+        <div><span class="c19-stat__label">CSS prefix</span><strong class="c19-stat__value">.c19-</strong></div>
+        <div><span class="c19-stat__label">Dependencies</span><strong class="c19-stat__value">0</strong></div>
+        <div><span class="c19-stat__label">Icon glyphs</span><strong class="c19-stat__value">59</strong></div>
+      </div>
+      <div class="c19-showcase-color-strip" aria-hidden="true"><span style="background:var(--c19-signal-red)"></span><span style="background:var(--c19-life-gray)"></span><span style="background:var(--c19-vacuum-black)"></span><span style="background:var(--c19-process-yellow)"></span><span style="background:var(--c19-cold-blue)"></span><span style="background:var(--c19-biological-green)"></span></div>
+    </div>
+  </section>
+
+  <div class="c19-container c19-container--wide c19-with-sidebar">
+    <aside class="c19-showcase-sidebar c19-sticky c19-section c19-no-print" style="--c19-sticky-top:5.5rem">
+      <nav class="c19-nav" aria-label="Documentation sections">
+        <a class="c19-nav__link" href="#principles">Principles</a>
+        <a class="c19-nav__link" href="#typography">Typography</a>
+        <a class="c19-nav__link" href="#color">Color</a>
+        <a class="c19-nav__link" href="#icons">Icons</a>
+        <a class="c19-nav__link" href="#components">Components</a>
+        <a class="c19-nav__link" href="#forms">Forms</a>
+        <a class="c19-nav__link" href="#data">Data & terminal</a>
+        <a class="c19-nav__link" href="#patterns">Patterns</a>
+      </nav>
+    </aside>
+
+    <div>
+      <section id="principles" class="c19-showcase-section c19-stack" style="--c19-stack-gap:1.5rem">
+        <p class="c19-kicker">01 / Foundation</p>
+        <h2 class="c19-heading-1">Design principles</h2>
+        <div class="c19-auto-grid" style="--c19-grid-min:15rem">
+          <article class="c19-card c19-stack"><div class="c19-symbol c19-symbol--red"><svg class="c19-icon" aria-hidden="true"><use href="#c19-hazard"></use></svg></div><h3 class="c19-heading-2">Signal first</h3><p class="c19-text-muted">Color and geometry expose state quickly; labels preserve meaning when color is unavailable.</p></article>
+          <article class="c19-card c19-stack"><div class="c19-symbol c19-symbol--gray"><svg class="c19-icon" aria-hidden="true"><use href="#c19-bulkhead"></use></svg></div><h3 class="c19-heading-2">Built, not polished</h3><p class="c19-text-muted">Panels feel manufactured and maintainable rather than ornamental or cinematic.</p></article>
+          <article class="c19-card c19-stack"><div class="c19-symbol c19-symbol--blue"><svg class="c19-icon" aria-hidden="true"><use href="#c19-computer"></use></svg></div><h3 class="c19-heading-2">Modern underneath</h3><p class="c19-text-muted">Cascade layers, custom properties, container units, native dialog, reduced motion, and keyboard tabs.</p></article>
+        </div>
+      </section>
+
+      <section id="typography" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">02 / Typography</p>
+        <h2 class="c19-heading-1">Three operational voices</h2>
+        <div class="c19-panel">
+          <div class="c19-panel__header"><span class="c19-panel__title">Typeface stack</span><span class="c19-badge c19-badge--green">Open source</span></div>
+          <div class="c19-panel__body c19-stack" style="--c19-stack-gap:2rem">
+            <div><p class="c19-label-text c19-text-muted">Display / Rajdhani</p><p class="c19-display">Atmospheric processor</p></div>
+            <div><p class="c19-label-text c19-text-muted">Interface / Space Grotesk</p><p style="font-size:1.5rem">Commercial lift operations remain nominal.</p></div>
+            <div><p class="c19-label-text c19-text-muted">Data / IBM Plex Mono</p><p class="c19-mono" style="font-size:1.35rem">GRID 19×18 · PRESSURE 101.3 KPA · 04:17:22</p></div>
+          </div>
+        </div>
+        <div class="c19-auto-grid" style="--c19-grid-min:18rem">
+          <article class="c19-card c19-stack" style="--c19-stack-gap:1rem">
+            <p class="c19-kicker">Hierarchy / display</p>
+            <h3 class="c19-heading-1">Flight control</h3>
+            <p class="c19-heading-2">Deck status</p>
+            <p class="c19-heading-3">Module 07 / nominal</p>
+            <p class="c19-caption">Fluid display sizes establish rank while compact headings preserve density.</p>
+          </article>
+          <article class="c19-card c19-stack" style="--c19-stack-gap:1rem">
+            <p class="c19-kicker">Interface / reading</p>
+            <p class="c19-lede">Clear instructions carry operational context without competing with status data.</p>
+            <p>Use the interface voice for procedures, descriptions, form values, and longer documentation.</p>
+            <p class="c19-caption">Caption text / secondary evidence and constraints.</p>
+          </article>
+          <article class="c19-card c19-stack" style="--c19-stack-gap:1rem">
+            <p class="c19-kicker">Telemetry / mono</p>
+            <p class="c19-data">VECTOR 077 / NOMINAL</p>
+            <p class="c19-data">UTC 04:17:22.184</p>
+            <p class="c19-data">O₂ 20.8% · 101.3 KPA</p>
+            <p class="c19-data">CARGO-ID C19-0042-A</p>
+            <p class="c19-caption">Tabular figures keep identifiers, units, and changing readings aligned.</p>
+          </article>
+        </div>
+        <pre class="c19-showcase-code"><code>&lt;h1 class="c19-heading-1"&gt;Flight control&lt;/h1&gt;
+&lt;p class="c19-data"&gt;VECTOR 077 / NOMINAL&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="color" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">03 / Color semantics</p>
+        <h2 class="c19-heading-1">Condition before decoration</h2>
+        <div class="c19-auto-grid c19-showcase-swatch-grid"><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-signal-red);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Signal red</strong><p class="c19-caption">Viable / alert</p><code class="c19-data">var(--c19-signal-red)</code></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-life-gray);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Life gray</strong><p class="c19-caption">Life-support condition</p><code class="c19-data">var(--c19-life-gray)</code></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-vacuum-black);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Vacuum black</strong><p class="c19-caption">Vacuum / death / hazard</p><code class="c19-data">var(--c19-vacuum-black)</code></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-process-yellow);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Process yellow</strong><p class="c19-caption">Heat / atomic / chemical</p><code class="c19-data">var(--c19-process-yellow)</code></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-cold-blue);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Cold blue</strong><p class="c19-caption">Lowered thermal condition</p><code class="c19-data">var(--c19-cold-blue)</code></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div style="block-size:5rem;border-radius:.35rem;background:var(--c19-biological-green);border:1px solid var(--c19-border)"></div>
+  <div><strong class="c19-label-text">Biological green</strong><p class="c19-caption">Non-human biological</p><code class="c19-data">var(--c19-biological-green)</code></div>
+</article></div>
+      </section>
+
+      <section id="icons" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <div class="c19-cluster" style="--c19-cluster-justify:space-between"><div><p class="c19-kicker">04 / Iconography</p><h2 class="c19-heading-1">39 framed glyphs</h2></div><span class="c19-badge">SVG sprite + individual files</span></div>
+        <p class="c19-lede">Original geometric symbols use a 19 × 18 viewBox and a shared rounded frame. The framework applies semantic color at the container level.</p>
+        <p class="c19-caption">This showcase preserves the original 39-sign register. The full manual includes all 59 generated equipment and interface glyphs.</p>
+        <div class="c19-auto-grid c19-showcase-icon-grid"><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-pressurized"></use></svg></div>
+  <div><strong class="c19-label-text">pressurized</strong><p class="c19-caption">Pressurized compartment</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-gravity"></use></svg></div>
+  <div><strong class="c19-label-text">gravity</strong><p class="c19-caption">Artificial gravity active</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-gravity-off"></use></svg></div>
+  <div><strong class="c19-label-text">gravity off</strong><p class="c19-caption">Artificial gravity absent</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cryogenic"></use></svg></div>
+  <div><strong class="c19-label-text">cryogenic</strong><p class="c19-caption">Cryogenic system</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-airlock"></use></svg></div>
+  <div><strong class="c19-label-text">airlock</strong><p class="c19-caption">Airlock</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-bulkhead"></use></svg></div>
+  <div><strong class="c19-label-text">bulkhead</strong><p class="c19-caption">Bulkhead door</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-vacuum"></use></svg></div>
+  <div><strong class="c19-label-text">vacuum</strong><p class="c19-caption">Vacuum or no pressure</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-suit"></use></svg></div>
+  <div><strong class="c19-label-text">suit</strong><p class="c19-caption">Pressure suit locker</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-optics"></use></svg></div>
+  <div><strong class="c19-label-text">optics</strong><p class="c19-caption">Photonic optics</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-laser"></use></svg></div>
+  <div><strong class="c19-label-text">laser</strong><p class="c19-caption">Laser emitter</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-power"></use></svg></div>
+  <div><strong class="c19-label-text">power</strong><p class="c19-caption">Power system</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-hazard"></use></svg></div>
+  <div><strong class="c19-label-text">hazard</strong><p class="c19-caption">General hazard</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-thermal"></use></svg></div>
+  <div><strong class="c19-label-text">thermal</strong><p class="c19-caption">Thermal process</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-bio"></use></svg></div>
+  <div><strong class="c19-label-text">bio</strong><p class="c19-caption">Non-human biological material</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-medical"></use></svg></div>
+  <div><strong class="c19-label-text">medical</strong><p class="c19-caption">Medical station</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-navigation"></use></svg></div>
+  <div><strong class="c19-label-text">navigation</strong><p class="c19-caption">Navigation</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-communications"></use></svg></div>
+  <div><strong class="c19-label-text">communications</strong><p class="c19-caption">Communications</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cargo"></use></svg></div>
+  <div><strong class="c19-label-text">cargo</strong><p class="c19-caption">Cargo</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-repair"></use></svg></div>
+  <div><strong class="c19-label-text">repair</strong><p class="c19-caption">Repair</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-computer"></use></svg></div>
+  <div><strong class="c19-label-text">computer</strong><p class="c19-caption">Computer terminal</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-data"></use></svg></div>
+  <div><strong class="c19-label-text">data</strong><p class="c19-caption">Data store</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-location"></use></svg></div>
+  <div><strong class="c19-label-text">location</strong><p class="c19-caption">Location marker</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-warning"></use></svg></div>
+  <div><strong class="c19-label-text">warning</strong><p class="c19-caption">Warning</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-check"></use></svg></div>
+  <div><strong class="c19-label-text">check</strong><p class="c19-caption">Confirm</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-close"></use></svg></div>
+  <div><strong class="c19-label-text">close</strong><p class="c19-caption">Close</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-left"></use></svg></div>
+  <div><strong class="c19-label-text">arrow left</strong><p class="c19-caption">Previous</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-right"></use></svg></div>
+  <div><strong class="c19-label-text">arrow right</strong><p class="c19-caption">Next</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-up"></use></svg></div>
+  <div><strong class="c19-label-text">arrow up</strong><p class="c19-caption">Up</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-down"></use></svg></div>
+  <div><strong class="c19-label-text">arrow down</strong><p class="c19-caption">Down</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-menu"></use></svg></div>
+  <div><strong class="c19-label-text">menu</strong><p class="c19-caption">Menu</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-search"></use></svg></div>
+  <div><strong class="c19-label-text">search</strong><p class="c19-caption">Search</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-settings"></use></svg></div>
+  <div><strong class="c19-label-text">settings</strong><p class="c19-caption">Settings</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-user"></use></svg></div>
+  <div><strong class="c19-label-text">user</strong><p class="c19-caption">User</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--blue" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-lock"></use></svg></div>
+  <div><strong class="c19-label-text">lock</strong><p class="c19-caption">Locked</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--green" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-unlock"></use></svg></div>
+  <div><strong class="c19-label-text">unlock</strong><p class="c19-caption">Unlocked</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--black" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-oxygen"></use></svg></div>
+  <div><strong class="c19-label-text">oxygen</strong><p class="c19-caption">Oxygen</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--red" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-shield"></use></svg></div>
+  <div><strong class="c19-label-text">shield</strong><p class="c19-caption">Protected</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--gray" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-light"></use></svg></div>
+  <div><strong class="c19-label-text">light</strong><p class="c19-caption">Lighting</p></div>
+</article><article class="c19-card c19-stack" style="--c19-stack-gap:.75rem">
+  <div class="c19-symbol c19-symbol--yellow" style="--c19-symbol-size:3.25rem"><svg class="c19-icon" aria-hidden="true"><use href="#c19-clock"></use></svg></div>
+  <div><strong class="c19-label-text">clock</strong><p class="c19-caption">Time</p></div>
+</article></div>
+        <pre class="c19-showcase-code"><code>&lt;div class="c19-symbol c19-symbol--red"&gt;
+  &lt;svg class="c19-icon" aria-hidden="true"&gt;
+    &lt;use href="#c19-airlock"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section id="components" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">05 / Components</p>
+        <h2 class="c19-heading-1">Controls and state</h2>
+
+        <div class="c19-rule-label">Buttons</div>
+        <div class="c19-cluster">
+          <button class="c19-button" type="button">Primary <svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-right"></use></svg></button>
+          <button class="c19-button c19-button--secondary" type="button">Secondary</button>
+          <button class="c19-button c19-button--ghost" type="button">Ghost</button>
+          <button class="c19-button c19-button--warning" type="button">Caution</button>
+          <button class="c19-button c19-button--danger" type="button">Vacuum</button>
+          <button class="c19-button" type="button" disabled>Disabled</button>
+          <button class="c19-icon-button c19-icon-button--secondary" type="button" aria-label="Settings" data-c19-tooltip="Settings"><svg class="c19-icon" aria-hidden="true"><use href="#c19-settings"></use></svg></button>
+        </div>
+        <div class="c19-cluster">
+          <span class="c19-inline-loading" role="status"><span class="c19-spinner" aria-hidden="true"></span>Acquiring telemetry</span>
+          <button class="c19-button" type="button" aria-busy="true"><span class="c19-spinner" aria-hidden="true"></span>Transmitting</button>
+          <button class="c19-button c19-button--secondary c19-menu-trigger" type="button" popovertarget="showcase-menu" aria-controls="showcase-menu">System actions <svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-down"></use></svg></button>
+        </div>
+        <div class="c19-menu" id="showcase-menu" popover aria-label="System actions">
+          <span class="c19-menu__label">System actions</span>
+          <button class="c19-menu__item" type="button"><svg class="c19-icon" aria-hidden="true"><use href="#c19-data"></use></svg><span>Refresh telemetry</span><span class="c19-menu__meta">R</span></button>
+          <button class="c19-menu__item" type="button"><svg class="c19-icon" aria-hidden="true"><use href="#c19-copy"></use></svg><span>Copy report</span><span class="c19-menu__meta">⌘C</span></button>
+          <hr class="c19-menu__separator">
+          <button class="c19-menu__item" type="button"><svg class="c19-icon" aria-hidden="true"><use href="#c19-warning"></use></svg><span>Isolate system</span></button>
+        </div>
+
+        <div class="c19-rule-label">Badges and status</div>
+        <div class="c19-cluster"><span class="c19-badge">Neutral</span><span class="c19-badge c19-badge--red">Alert</span><span class="c19-badge c19-badge--yellow">Process</span><span class="c19-badge c19-badge--blue">Cryogenic</span><span class="c19-badge c19-badge--green">Biological</span><span class="c19-status c19-status--ok">Nominal</span><span class="c19-status c19-status--warn">Review</span><span class="c19-status c19-status--danger">Critical</span></div>
+
+        <div class="c19-rule-label">Alerts</div>
+        <div class="c19-stack">
+          <div class="c19-alert c19-alert--info" data-c19-dismissible><svg class="c19-icon" aria-hidden="true"><use href="#c19-communications"></use></svg><div><p class="c19-alert__title">Incoming transmission</p><p>Telemetry packet 19-B is ready for review.</p></div><button class="c19-icon-button c19-icon-button--ghost" type="button" aria-label="Dismiss" data-c19-dismiss><svg class="c19-icon" aria-hidden="true"><use href="#c19-close"></use></svg></button></div>
+          <div class="c19-alert c19-alert--warning"><svg class="c19-icon" aria-hidden="true"><use href="#c19-thermal"></use></svg><div><p class="c19-alert__title">Thermal variance</p><p>Processor bank exceeds the preferred range by 4.2 kelvin.</p></div></div>
+          <div class="c19-alert c19-alert--danger"><svg class="c19-icon" aria-hidden="true"><use href="#c19-vacuum"></use></svg><div><p class="c19-alert__title">Pressure boundary open</p><p>Seal the compartment before proceeding.</p></div></div>
+        </div>
+
+        <div class="c19-rule-label">Tabs</div>
+        <div class="c19-panel">
+          <div class="c19-panel__body">
+            <div class="c19-tabs" data-c19-tabs>
+              <div class="c19-tabs__list" role="tablist" aria-label="System information">
+                <button class="c19-tabs__tab" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true">Overview</button>
+                <button class="c19-tabs__tab" role="tab" id="tab-diagnostics" aria-controls="panel-diagnostics" aria-selected="false">Diagnostics</button>
+                <button class="c19-tabs__tab" role="tab" id="tab-log" aria-controls="panel-log" aria-selected="false">Log</button>
+              </div>
+              <div id="panel-overview" role="tabpanel" aria-labelledby="tab-overview"><p>All primary systems report within operational limits.</p></div>
+              <div id="panel-diagnostics" role="tabpanel" aria-labelledby="tab-diagnostics" hidden><p class="c19-mono">SYS/A 00 · SYS/B 00 · SYS/C 01</p></div>
+              <div id="panel-log" role="tabpanel" aria-labelledby="tab-log" hidden><p class="c19-mono">18:42:09 / ROUTINE CHECK COMPLETE</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c19-rule-label">Dialog, toast, accordion</div>
+        <div class="c19-auto-grid">
+          <article class="c19-card c19-stack"><h3 class="c19-heading-2">Native dialog</h3><p class="c19-text-muted">Uses the platform dialog element and a small interaction helper.</p><button class="c19-button" type="button" data-c19-dialog-open="demo-dialog">Open dialog</button></article>
+          <div class="c19-toast" data-c19-dismissible><svg class="c19-icon" aria-hidden="true"><use href="#c19-check"></use></svg><div><strong>Manifest saved</strong><p class="c19-caption">Local copy 04-771-B</p></div><button class="c19-icon-button c19-icon-button--ghost" type="button" aria-label="Dismiss" data-c19-dismiss><svg class="c19-icon" aria-hidden="true"><use href="#c19-close"></use></svg></button></div>
+          <div><details class="c19-accordion" open><summary>What is included?</summary><div class="c19-accordion__body">CSS source, distributable builds, JavaScript helpers, SVG icons, examples, and documentation.</div></details><details class="c19-accordion"><summary>Is JavaScript required?</summary><div class="c19-accordion__body">No. It only enables tabs, dismiss actions, theme switching, and dialog triggers.</div></details></div>
+        </div>
+      </section>
+
+      <section id="forms" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">06 / Forms</p>
+        <h2 class="c19-heading-1">Operational input</h2>
+        <form class="c19-panel" action="#" onsubmit="return false">
+          <div class="c19-panel__header"><span class="c19-panel__title">Cargo transfer request</span><span class="c19-status c19-status--ok">Link active</span></div>
+          <div class="c19-panel__body c19-grid">
+            <label class="c19-field c19-col-6"><span class="c19-field__label">Consignment ID</span><input class="c19-input c19-mono" value="C19-0042-A" aria-describedby="id-hint"><span class="c19-field__hint" id="id-hint">Use the manifest identifier.</span></label>
+            <label class="c19-field c19-col-6"><span class="c19-field__label">Destination</span><select class="c19-select"><option>Bay 04 / Pressurized</option><option>Bay 07 / Cryogenic</option><option>External rack / Vacuum</option></select></label>
+            <label class="c19-field c19-col-6"><span class="c19-field__label">Transfer velocity</span><span class="c19-input-group"><input class="c19-input c19-mono" value="0.42" inputmode="decimal"><span class="c19-input-group__addon">km/s</span><button class="c19-button c19-button--secondary" type="button">Apply</button></span></label>
+            <label class="c19-field c19-col-12"><span class="c19-field__label">Instructions</span><textarea class="c19-textarea" rows="4" placeholder="Enter handling notes"></textarea></label>
+            <fieldset class="c19-col-6 c19-stack" style="border:0;padding:0"><legend class="c19-field__label">Handling class</legend><label class="c19-choice"><input type="radio" name="class" checked> Standard</label><label class="c19-choice"><input type="radio" name="class"> Thermal process</label><label class="c19-choice"><input type="radio" name="class"> Biological</label></fieldset>
+            <div class="c19-col-6 c19-stack"><span class="c19-field__label">Safeties</span><label class="c19-choice"><input type="checkbox" checked> Pressure lock verified</label><label class="c19-switch"><input type="checkbox" checked><span class="c19-switch__track" aria-hidden="true"></span><span>Automatic isolation</span></label></div>
+          </div>
+          <div class="c19-panel__footer"><span class="c19-caption">Changes are recorded in the operations log.</span><div class="c19-cluster"><button class="c19-button c19-button--secondary" type="reset">Reset</button><button class="c19-button" type="submit">Submit request</button></div></div>
+        </form>
+      </section>
+
+      <section id="data" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">07 / Data displays</p>
+        <h2 class="c19-heading-1">Dense without becoming noisy</h2>
+        <div class="c19-grid">
+          <div class="c19-panel c19-col-7">
+            <div class="c19-panel__header"><span class="c19-panel__title">Environmental status</span><span class="c19-badge c19-badge--blue">Deck 03</span></div>
+            <div class="c19-panel__body c19-auto-grid" style="--c19-grid-min:9rem">
+              <div class="c19-stat"><span class="c19-stat__label">Pressure</span><span class="c19-stat__value">101.3</span><span class="c19-caption">kPa</span></div>
+              <div class="c19-stat"><span class="c19-stat__label">Temperature</span><span class="c19-stat__value">19.6</span><span class="c19-caption">°C</span></div>
+              <div class="c19-stat"><span class="c19-stat__label">Oxygen</span><span class="c19-stat__value">20.8</span><span class="c19-caption">%</span></div>
+            </div>
+            <div class="c19-panel__footer c19-stack" style="align-items:stretch"><div class="c19-cluster" style="--c19-cluster-justify:space-between"><span class="c19-label-text">Scrubber cycle</span><span class="c19-data">74%</span></div><div class="c19-progress" aria-label="Scrubber cycle 74 percent"><div class="c19-progress__bar" style="--c19-value:74"></div></div></div>
+          </div>
+          <div class="c19-terminal c19-col-5" aria-label="Terminal output"><div>MU/CARGO INTERFACE 2.4</div><div>AUTH NODE: LOCAL</div><div>LINK: STABLE</div><br><div class="c19-terminal__prompt">LIST BAY/04</div><div>04-A MEDICAL SUPPLY</div><div>04-B OPTICAL ARRAY</div><div>04-C PRESSURE VALVE</div><div class="c19-terminal__prompt c19-pulse">_</div></div>
+        </div>
+        <div class="c19-table-wrap">
+          <table class="c19-table">
+            <thead><tr><th scope="col">Module</th><th scope="col">Condition</th><th scope="col">Load</th><th scope="col">Updated</th></tr></thead>
+            <tbody><tr><td>Atmosphere</td><td><span class="c19-status c19-status--ok">Nominal</span></td><td class="c19-data">42%</td><td class="c19-data">18:42:09</td></tr><tr><td>Cryogenic</td><td><span class="c19-status c19-status--cold">Stable</span></td><td class="c19-data">67%</td><td class="c19-data">18:41:37</td></tr><tr><td>Thermal exchange</td><td><span class="c19-status c19-status--warn">Review</span></td><td class="c19-data">88%</td><td class="c19-data">18:40:11</td></tr></tbody>
+          </table>
+        </div>
+        <div class="c19-stack"><div class="c19-cluster" style="--c19-cluster-justify:space-between"><span class="c19-label-text">Segmented load indicator</span><span class="c19-data">07 / 10</span></div><div class="c19-segmented-meter" aria-label="Load seven of ten"><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span></span><span></span><span></span></div></div>
+      </section>
+
+      <section id="patterns" class="c19-showcase-section c19-stack" style="--c19-stack-gap:2rem">
+        <p class="c19-kicker">08 / Application pattern</p>
+        <h2 class="c19-heading-1">Bridge dashboard</h2>
+        <div class="c19-auto-grid" style="--c19-grid-min:17rem">
+          <article class="c19-panel"><div class="c19-panel__header"><span class="c19-panel__title">Airlock 02</span><span class="c19-status c19-status--danger">Open</span></div><div class="c19-panel__body c19-stack"><div class="c19-cluster"><div class="c19-symbol c19-symbol--red"><svg class="c19-icon" aria-hidden="true"><use href="#c19-airlock"></use></svg></div><div><p class="c19-stat__label">Pressure delta</p><p class="c19-stat__value">−101.1</p></div></div><button class="c19-button c19-button--danger" type="button">Isolate bay</button></div></article>
+          <article class="c19-panel"><div class="c19-panel__header"><span class="c19-panel__title">Cryogenic bank</span><span class="c19-status c19-status--cold">Stable</span></div><div class="c19-panel__body c19-stack"><div class="c19-cluster"><div class="c19-symbol c19-symbol--blue"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cryogenic"></use></svg></div><div><p class="c19-stat__label">Core temperature</p><p class="c19-stat__value">−184.7</p></div></div><div class="c19-progress"><div class="c19-progress__bar" style="--c19-value:63;--c19-progress-color:var(--c19-cold-blue)"></div></div></div></article>
+          <article class="c19-panel"><div class="c19-panel__header"><span class="c19-panel__title">Bio isolation</span><span class="c19-status c19-status--ok">Sealed</span></div><div class="c19-panel__body c19-stack"><div class="c19-cluster"><div class="c19-symbol c19-symbol--green"><svg class="c19-icon" aria-hidden="true"><use href="#c19-bio"></use></svg></div><div><p class="c19-stat__label">Containment</p><p class="c19-stat__value">100%</p></div></div><button class="c19-button c19-button--secondary" type="button">View manifest</button></div></article>
+        </div>
+        <div class="c19-commandbar"><span class="c19-key">⌘</span><span class="c19-key">K</span><input class="c19-input" placeholder="Search commands, systems, or manifests" aria-label="Search commands"><button class="c19-icon-button" type="button" aria-label="Search"><svg class="c19-icon" aria-hidden="true"><use href="#c19-search"></use></svg></button></div>
+        <nav class="c19-pagination" aria-label="Pagination"><a href="#" aria-label="Previous page"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-left"></use></svg></a><a href="#">1</a><a href="#" aria-current="page">2</a><a href="#">3</a><a href="#" aria-label="Next page"><svg class="c19-icon" aria-hidden="true"><use href="#c19-arrow-right"></use></svg></a></nav>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="c19-section">
+  <div class="c19-container c19-container--wide c19-cluster" style="--c19-cluster-justify:space-between"><p class="c19-caption">CARGO/19 CSS v1.3.0 · MIT · Consolidated independent design study</p></div>
+</footer>
+<dialog class="c19-dialog" id="demo-dialog" aria-labelledby="dialog-title">
+  <div class="c19-dialog__header"><h2 class="c19-panel__title" id="dialog-title">Confirm pressure cycle</h2><button class="c19-icon-button c19-icon-button--ghost" type="button" aria-label="Close dialog" data-c19-dialog-close><svg class="c19-icon" aria-hidden="true"><use href="#c19-close"></use></svg></button></div>
+  <div class="c19-dialog__body c19-stack"><div class="c19-alert c19-alert--warning"><svg class="c19-icon" aria-hidden="true"><use href="#c19-warning"></use></svg><div><p class="c19-alert__title">Compartment must be clear</p><p>Beginning the cycle will lock both bulkhead doors.</p></div></div><label class="c19-choice"><input type="checkbox"> I confirm the compartment is clear.</label></div>
+  <div class="c19-dialog__footer"><button class="c19-button c19-button--secondary" type="button" data-c19-dialog-close>Cancel</button><button class="c19-button" type="button" data-c19-dialog-close>Begin cycle</button></div>
+</dialog>
+<script src="dist/cargo19.js"></script>
+</body>
+</html>

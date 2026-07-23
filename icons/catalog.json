@@ -1,0 +1,888 @@
+{
+  "name": "CARGO/19 icon catalog",
+  "version": "1.3.0",
+  "viewBox": "0 0 19 18",
+  "construction": {
+    "grid": "19 \u00d7 18",
+    "equipmentFrame": "18 \u00d7 17 rounded red field with a 14 \u00d7 13 equipment plate",
+    "palette": {
+      "frame": "#ed2024",
+      "plate": "#e5e8f1",
+      "structure": "#847a73",
+      "dark": "#0f0e09",
+      "process": "#e76c1a",
+      "cold": "#2f3795",
+      "bio": "#3f5f2d",
+      "white": "#ffffff"
+    }
+  },
+  "counts": {
+    "total": 59,
+    "signs": 39,
+    "micro": 20
+  },
+  "icons": [
+    {
+      "name": "pressurized",
+      "label": "Pressurized",
+      "category": "environment",
+      "description": "Pressurized compartment or vessel.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "pressure",
+        "vessel",
+        "atmosphere"
+      ],
+      "id": "c19-pressurized",
+      "file": "individual/pressurized.svg"
+    },
+    {
+      "name": "gravity",
+      "label": "Gravity",
+      "category": "environment",
+      "description": "Artificial gravity is active.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "down",
+        "artificial gravity",
+        "weight"
+      ],
+      "id": "c19-gravity",
+      "file": "individual/gravity.svg"
+    },
+    {
+      "name": "gravity-off",
+      "label": "Gravity off",
+      "category": "environment",
+      "description": "Zero-gravity or gravity-disabled zone.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "zero g",
+        "no gravity",
+        "floating"
+      ],
+      "id": "c19-gravity-off",
+      "file": "individual/gravity-off.svg"
+    },
+    {
+      "name": "cryogenic",
+      "label": "Cryogenic",
+      "category": "temperature",
+      "description": "Cryogenic equipment or very low temperature.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "cold",
+        "freeze",
+        "temperature"
+      ],
+      "id": "c19-cryogenic",
+      "file": "individual/cryogenic.svg"
+    },
+    {
+      "name": "airlock",
+      "label": "Airlock",
+      "category": "access",
+      "description": "Pressure-sealed airlock.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "door",
+        "pressure",
+        "seal"
+      ],
+      "id": "c19-airlock",
+      "file": "individual/airlock.svg"
+    },
+    {
+      "name": "bulkhead",
+      "label": "Bulkhead",
+      "category": "access",
+      "description": "Structural bulkhead or sealed hatch.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "hatch",
+        "door",
+        "structure"
+      ],
+      "id": "c19-bulkhead",
+      "file": "individual/bulkhead.svg"
+    },
+    {
+      "name": "vacuum",
+      "label": "Vacuum",
+      "category": "environment",
+      "description": "Vacuum or unpressurized zone.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "void",
+        "depressurized",
+        "space"
+      ],
+      "id": "c19-vacuum",
+      "file": "individual/vacuum.svg"
+    },
+    {
+      "name": "suit",
+      "label": "Suit",
+      "category": "personnel",
+      "description": "Pressure suit storage or service point.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "spacesuit",
+        "crew",
+        "eva"
+      ],
+      "id": "c19-suit",
+      "file": "individual/suit.svg"
+    },
+    {
+      "name": "optics",
+      "label": "Optics",
+      "category": "equipment",
+      "description": "Optical sensor or observation system.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "eye",
+        "camera",
+        "sensor"
+      ],
+      "id": "c19-optics",
+      "file": "individual/optics.svg"
+    },
+    {
+      "name": "laser",
+      "label": "Laser",
+      "category": "equipment",
+      "description": "Coherent beam equipment or laser hazard.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "beam",
+        "optical",
+        "hazard"
+      ],
+      "id": "c19-laser",
+      "file": "individual/laser.svg"
+    },
+    {
+      "name": "power",
+      "label": "Power",
+      "category": "equipment",
+      "description": "Electrical power equipment.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "electric",
+        "energy",
+        "voltage"
+      ],
+      "id": "c19-power",
+      "file": "individual/power.svg"
+    },
+    {
+      "name": "hazard",
+      "label": "Hazard",
+      "category": "hazard",
+      "description": "General harmful-process warning.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "warning",
+        "danger",
+        "caution"
+      ],
+      "id": "c19-hazard",
+      "file": "individual/hazard.svg"
+    },
+    {
+      "name": "suit-required",
+      "label": "Suit required",
+      "category": "personnel",
+      "description": "Pressure suit is mandatory beyond this point.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "mandatory",
+        "spacesuit",
+        "eva"
+      ],
+      "id": "c19-suit-required",
+      "file": "individual/suit-required.svg"
+    },
+    {
+      "name": "suit-required-zero-g",
+      "label": "Suit required / zero-g",
+      "category": "personnel",
+      "description": "Pressure suit required in a zero-gravity zone.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "zero g",
+        "mandatory",
+        "spacesuit"
+      ],
+      "id": "c19-suit-required-zero-g",
+      "file": "individual/suit-required-zero-g.svg"
+    },
+    {
+      "name": "thermal",
+      "label": "Thermal",
+      "category": "temperature",
+      "description": "High-temperature or thermal system.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "heat",
+        "hot",
+        "temperature"
+      ],
+      "id": "c19-thermal",
+      "file": "individual/thermal.svg"
+    },
+    {
+      "name": "radiation-shield",
+      "label": "Radiation shield",
+      "category": "hazard",
+      "description": "Shielded radiation area or protective barrier.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "shield",
+        "radiation",
+        "protection"
+      ],
+      "id": "c19-radiation-shield",
+      "file": "individual/radiation-shield.svg"
+    },
+    {
+      "name": "radiation",
+      "label": "Radiation",
+      "category": "hazard",
+      "description": "Ionizing radiation.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "nuclear",
+        "ionizing",
+        "hazard"
+      ],
+      "id": "c19-radiation",
+      "file": "individual/radiation.svg"
+    },
+    {
+      "name": "radiation-high",
+      "label": "High radiation",
+      "category": "hazard",
+      "description": "Elevated ionizing radiation.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "high",
+        "radiation",
+        "danger"
+      ],
+      "id": "c19-radiation-high",
+      "file": "individual/radiation-high.svg"
+    },
+    {
+      "name": "refrigerator",
+      "label": "Refrigerator",
+      "category": "temperature",
+      "description": "Cold storage or refrigeration unit.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "cold",
+        "storage",
+        "freezer"
+      ],
+      "id": "c19-refrigerator",
+      "file": "individual/refrigerator.svg"
+    },
+    {
+      "name": "direction",
+      "label": "Direction",
+      "category": "wayfinding",
+      "description": "Directional route indicator.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "arrow",
+        "route",
+        "right"
+      ],
+      "id": "c19-direction",
+      "file": "individual/direction.svg"
+    },
+    {
+      "name": "life-support",
+      "label": "Life support",
+      "category": "life-support",
+      "description": "Atmosphere and crew life-support system.",
+      "tone": "bio",
+      "kind": "sign",
+      "keywords": [
+        "oxygen",
+        "air",
+        "crew"
+      ],
+      "id": "c19-life-support",
+      "file": "individual/life-support.svg"
+    },
+    {
+      "name": "galley",
+      "label": "Galley",
+      "category": "facilities",
+      "description": "Food preparation and galley.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "food",
+        "kitchen",
+        "meal"
+      ],
+      "id": "c19-galley",
+      "file": "individual/galley.svg"
+    },
+    {
+      "name": "coffee",
+      "label": "Coffee",
+      "category": "facilities",
+      "description": "Coffee and hot beverage station.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "drink",
+        "beverage",
+        "galley"
+      ],
+      "id": "c19-coffee",
+      "file": "individual/coffee.svg"
+    },
+    {
+      "name": "bridge",
+      "label": "Bridge",
+      "category": "operations",
+      "description": "Command bridge or control station.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "command",
+        "control",
+        "cockpit"
+      ],
+      "id": "c19-bridge",
+      "file": "individual/bridge.svg"
+    },
+    {
+      "name": "autodoc",
+      "label": "Autodoc",
+      "category": "medical",
+      "description": "Automated medical treatment unit.",
+      "tone": "bio",
+      "kind": "sign",
+      "keywords": [
+        "medical",
+        "treatment",
+        "bed"
+      ],
+      "id": "c19-autodoc",
+      "file": "individual/autodoc.svg"
+    },
+    {
+      "name": "computer",
+      "label": "Computer",
+      "category": "equipment",
+      "description": "Computing or terminal equipment.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "terminal",
+        "screen",
+        "data"
+      ],
+      "id": "c19-computer",
+      "file": "individual/computer.svg"
+    },
+    {
+      "name": "repair",
+      "label": "Repair",
+      "category": "maintenance",
+      "description": "Maintenance and repair station.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "wrench",
+        "maintenance",
+        "service"
+      ],
+      "id": "c19-repair",
+      "file": "individual/repair.svg"
+    },
+    {
+      "name": "ladder",
+      "label": "Ladder",
+      "category": "access",
+      "description": "Vertical access ladder.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "access",
+        "climb",
+        "vertical"
+      ],
+      "id": "c19-ladder",
+      "file": "individual/ladder.svg"
+    },
+    {
+      "name": "intercom",
+      "label": "Intercom",
+      "category": "communications",
+      "description": "Intercom or public-address point.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "speaker",
+        "audio",
+        "announcement"
+      ],
+      "id": "c19-intercom",
+      "file": "individual/intercom.svg"
+    },
+    {
+      "name": "storage-nonorganic",
+      "label": "Non-organic storage",
+      "category": "storage",
+      "description": "Storage for non-organic materials.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "crate",
+        "materials",
+        "cargo"
+      ],
+      "id": "c19-storage-nonorganic",
+      "file": "individual/storage-nonorganic.svg"
+    },
+    {
+      "name": "storage-organic",
+      "label": "Organic storage",
+      "category": "storage",
+      "description": "Storage for biological or organic materials.",
+      "tone": "bio",
+      "kind": "sign",
+      "keywords": [
+        "crate",
+        "biological",
+        "cargo"
+      ],
+      "id": "c19-storage-organic",
+      "file": "individual/storage-organic.svg"
+    },
+    {
+      "name": "bio",
+      "label": "Biological",
+      "category": "life-support",
+      "description": "Biological material or process.",
+      "tone": "bio",
+      "kind": "sign",
+      "keywords": [
+        "organic",
+        "cell",
+        "biology"
+      ],
+      "id": "c19-bio",
+      "file": "individual/bio.svg"
+    },
+    {
+      "name": "medical",
+      "label": "Medical",
+      "category": "medical",
+      "description": "Medical care or first-aid station.",
+      "tone": "bio",
+      "kind": "sign",
+      "keywords": [
+        "cross",
+        "health",
+        "first aid"
+      ],
+      "id": "c19-medical",
+      "file": "individual/medical.svg"
+    },
+    {
+      "name": "navigation",
+      "label": "Navigation",
+      "category": "operations",
+      "description": "Navigation and route-planning station.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "compass",
+        "route",
+        "heading"
+      ],
+      "id": "c19-navigation",
+      "file": "individual/navigation.svg"
+    },
+    {
+      "name": "communications",
+      "label": "Communications",
+      "category": "communications",
+      "description": "Radio or network communications.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "radio",
+        "antenna",
+        "signal"
+      ],
+      "id": "c19-communications",
+      "file": "individual/communications.svg"
+    },
+    {
+      "name": "cargo",
+      "label": "Cargo",
+      "category": "storage",
+      "description": "General cargo handling or hold.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "crate",
+        "hold",
+        "freight"
+      ],
+      "id": "c19-cargo",
+      "file": "individual/cargo.svg"
+    },
+    {
+      "name": "data",
+      "label": "Data",
+      "category": "equipment",
+      "description": "Data processing or storage.",
+      "tone": "cold",
+      "kind": "sign",
+      "keywords": [
+        "storage",
+        "database",
+        "telemetry"
+      ],
+      "id": "c19-data",
+      "file": "individual/data.svg"
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "category": "wayfinding",
+      "description": "Mapped location or destination.",
+      "tone": "dark",
+      "kind": "sign",
+      "keywords": [
+        "pin",
+        "map",
+        "destination"
+      ],
+      "id": "c19-location",
+      "file": "individual/location.svg"
+    },
+    {
+      "name": "warning",
+      "label": "Warning beacon",
+      "category": "hazard",
+      "description": "Active warning beacon or alarm.",
+      "tone": "process",
+      "kind": "sign",
+      "keywords": [
+        "alarm",
+        "beacon",
+        "caution"
+      ],
+      "id": "c19-warning",
+      "file": "individual/warning.svg"
+    },
+    {
+      "name": "check",
+      "label": "Check",
+      "category": "interface",
+      "description": "Confirmation or completed state.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "done",
+        "success"
+      ],
+      "id": "c19-check",
+      "file": "individual/check.svg"
+    },
+    {
+      "name": "close",
+      "label": "Close",
+      "category": "interface",
+      "description": "Close, cancel, or dismiss.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "x",
+        "dismiss"
+      ],
+      "id": "c19-close",
+      "file": "individual/close.svg"
+    },
+    {
+      "name": "arrow-left",
+      "label": "Arrow left",
+      "category": "interface",
+      "description": "Navigate or move left.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "back",
+        "previous"
+      ],
+      "id": "c19-arrow-left",
+      "file": "individual/arrow-left.svg"
+    },
+    {
+      "name": "arrow-right",
+      "label": "Arrow right",
+      "category": "interface",
+      "description": "Navigate or move right.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "next",
+        "forward"
+      ],
+      "id": "c19-arrow-right",
+      "file": "individual/arrow-right.svg"
+    },
+    {
+      "name": "arrow-up",
+      "label": "Arrow up",
+      "category": "interface",
+      "description": "Navigate or move up.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "top"
+      ],
+      "id": "c19-arrow-up",
+      "file": "individual/arrow-up.svg"
+    },
+    {
+      "name": "arrow-down",
+      "label": "Arrow down",
+      "category": "interface",
+      "description": "Navigate or move down.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "bottom"
+      ],
+      "id": "c19-arrow-down",
+      "file": "individual/arrow-down.svg"
+    },
+    {
+      "name": "menu",
+      "label": "Menu",
+      "category": "interface",
+      "description": "Open navigation or menu.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "navigation",
+        "hamburger"
+      ],
+      "id": "c19-menu",
+      "file": "individual/menu.svg"
+    },
+    {
+      "name": "search",
+      "label": "Search",
+      "category": "interface",
+      "description": "Search or inspect.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "find",
+        "magnify"
+      ],
+      "id": "c19-search",
+      "file": "individual/search.svg"
+    },
+    {
+      "name": "settings",
+      "label": "Settings",
+      "category": "interface",
+      "description": "Configuration or controls.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "gear",
+        "configure"
+      ],
+      "id": "c19-settings",
+      "file": "individual/settings.svg"
+    },
+    {
+      "name": "user",
+      "label": "User",
+      "category": "interface",
+      "description": "User, operator, or crew member.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "person",
+        "crew"
+      ],
+      "id": "c19-user",
+      "file": "individual/user.svg"
+    },
+    {
+      "name": "lock",
+      "label": "Lock",
+      "category": "interface",
+      "description": "Locked or secured state.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "secure"
+      ],
+      "id": "c19-lock",
+      "file": "individual/lock.svg"
+    },
+    {
+      "name": "unlock",
+      "label": "Unlock",
+      "category": "interface",
+      "description": "Unlocked or unsecured state.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "open",
+        "security"
+      ],
+      "id": "c19-unlock",
+      "file": "individual/unlock.svg"
+    },
+    {
+      "name": "oxygen",
+      "label": "Oxygen",
+      "category": "interface",
+      "description": "Oxygen or atmosphere status.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "o2",
+        "air"
+      ],
+      "id": "c19-oxygen",
+      "file": "individual/oxygen.svg"
+    },
+    {
+      "name": "shield",
+      "label": "Shield",
+      "category": "interface",
+      "description": "Protection or protected state.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "protect",
+        "security"
+      ],
+      "id": "c19-shield",
+      "file": "individual/shield.svg"
+    },
+    {
+      "name": "light",
+      "label": "Light",
+      "category": "interface",
+      "description": "Lighting or illumination.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "bulb",
+        "illumination"
+      ],
+      "id": "c19-light",
+      "file": "individual/light.svg"
+    },
+    {
+      "name": "clock",
+      "label": "Clock",
+      "category": "interface",
+      "description": "Time, schedule, or duration.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "time",
+        "schedule"
+      ],
+      "id": "c19-clock",
+      "file": "individual/clock.svg"
+    },
+    {
+      "name": "plus",
+      "label": "Plus",
+      "category": "interface",
+      "description": "Add or expand.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "add",
+        "expand"
+      ],
+      "id": "c19-plus",
+      "file": "individual/plus.svg"
+    },
+    {
+      "name": "minus",
+      "label": "Minus",
+      "category": "interface",
+      "description": "Remove or collapse.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "remove",
+        "collapse"
+      ],
+      "id": "c19-minus",
+      "file": "individual/minus.svg"
+    },
+    {
+      "name": "copy",
+      "label": "Copy",
+      "category": "interface",
+      "description": "Copy content to the clipboard.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "clipboard",
+        "duplicate"
+      ],
+      "id": "c19-copy",
+      "file": "individual/copy.svg"
+    },
+    {
+      "name": "external-link",
+      "label": "External link",
+      "category": "interface",
+      "description": "Open an external resource.",
+      "tone": "dark",
+      "kind": "micro",
+      "keywords": [
+        "new window",
+        "outbound"
+      ],
+      "id": "c19-external-link",
+      "file": "individual/external-link.svg"
+    }
+  ]
+}

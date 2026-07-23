@@ -1,0 +1,32 @@
+@layer c19.motion {
+  @keyframes c19-title-resolve {
+    0% { transform: translateY(-0.035em) scaleX(0.16); opacity: 0.72; filter: blur(0.025em); }
+    52% { transform: translateY(0) scaleX(0.3); opacity: 0.9; filter: none; }
+    100% { transform: translateY(0) scaleX(1); opacity: 1; filter: none; }
+  }
+  @keyframes c19-signal-acquire {
+    0%, 34% { transform: translateY(-0.035em) scaleX(0.04); opacity: 0.42; filter: blur(0.02em); }
+    58% { transform: translateY(0) scaleX(0.24); opacity: 0.78; filter: none; }
+    76% { transform: translateY(0) scaleX(0.62); opacity: 0.92; filter: none; }
+    100% { transform: translateY(0) scaleX(1); opacity: 1; filter: none; }
+  }
+  @keyframes c19-signal-line {
+    0% { transform: scaleX(0); opacity: 0; }
+    35% { opacity: 0.62; }
+    100% { transform: scaleX(1); opacity: 0.28; }
+  }
+  @keyframes c19-spinner { to { transform: rotate(1turn); } }
+  @keyframes c19-skeleton { to { transform: translateX(260%); } }
+  @keyframes c19-pulse { 50% { opacity: 0.38; } }
+  .c19-pulse { animation: c19-pulse 1.6s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+    .c19-title-reveal > span { transform: none; opacity: 1; filter: none; }
+    .c19-title-reveal.c19-signal-acquire > span { animation: none; transform: none; opacity: 1; filter: none; }
+    .c19-signal-acquire::after { animation: none; transform: none; opacity: 0.28; }
+    .c19-spinner { animation: none; transform: none; }
+  }
+  @media (forced-colors: active) {
+    .c19-symbol, .c19-button, .c19-panel, .c19-card, .c19-alert, .c19-input, .c19-select, .c19-textarea, .c19-menu, .c19-spinner, .c19-input-group__addon { forced-color-adjust: auto; }
+  }
+}

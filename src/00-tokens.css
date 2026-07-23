@@ -1,0 +1,183 @@
+@layer c19.tokens {
+  :root,
+  [data-c19-theme="paper"],
+  .c19-theme-paper {
+    color-scheme: light;
+
+    --c19-font-sans: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --c19-font-display: "Rajdhani", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --c19-font-label: "Rajdhani", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --c19-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+    --c19-bg: #e9e7dd;
+    --c19-surface: #f8f7f2;
+    --c19-surface-raised: #ffffff;
+    --c19-surface-sunken: #deddd4;
+    --c19-ink: #141512;
+    --c19-ink-muted: #5c5f59;
+    --c19-border: #94978e;
+    --c19-border-strong: #555950;
+    --c19-grid: rgb(19 21 18 / 0.055);
+
+    /* Accessible interface colors. */
+    --c19-signal-red: #c41f2a;
+    --c19-life-gray: #70756f;
+    --c19-vacuum-black: #0c0d0b;
+    --c19-process-yellow: #e4b526;
+    --c19-process-orange: #d75f12;
+    --c19-cold-blue: #1c5fa8;
+    --c19-biological-green: #1f7954;
+
+    /* Fixed seven-color equipment-sign palette. */
+    --c19-icon-frame: #ed2024;
+    --c19-icon-plate: #e5e8f1;
+    --c19-icon-structure: #847a73;
+    --c19-icon-dark: #0f0e09;
+    --c19-icon-process: #e76c1a;
+    --c19-icon-cold: #2f3795;
+    --c19-icon-bio: #3f5f2d;
+    --c19-icon-outline: transparent;
+    --c19-icon-cutout: var(--c19-surface);
+
+    --c19-on-red: #ffffff;
+    --c19-on-gray: #111310;
+    --c19-on-black: #ffffff;
+    --c19-on-yellow: #151613;
+    --c19-on-orange: #151613;
+    --c19-on-blue: #ffffff;
+    --c19-on-green: #ffffff;
+
+    --c19-info: var(--c19-cold-blue);
+    --c19-success: var(--c19-biological-green);
+    --c19-warning: var(--c19-process-yellow);
+    --c19-danger: var(--c19-signal-red);
+
+    --c19-focus: #005fc7;
+    --c19-selection: #ffc6cd;
+    --c19-shadow-color: 19 21 18;
+
+    --c19-space-1: 0.25rem;
+    --c19-space-2: 0.5rem;
+    --c19-space-3: 0.75rem;
+    --c19-space-4: 1rem;
+    --c19-space-5: 1.5rem;
+    --c19-space-6: 2rem;
+    --c19-space-7: 3rem;
+    --c19-space-8: 4rem;
+    --c19-space-9: 6rem;
+    --c19-space-10: 8rem;
+
+    --c19-text-xs: 0.75rem;
+    --c19-text-sm: 0.875rem;
+    --c19-text-md: 1rem;
+    --c19-text-lg: 1.25rem;
+    --c19-text-xl: clamp(1.5rem, 2vw, 2rem);
+    --c19-text-2xl: clamp(2rem, 4vw, 3.75rem);
+    --c19-text-3xl: clamp(3rem, 8vw, 7.5rem);
+
+    --c19-radius-sm: 0.25rem;
+    --c19-radius-md: 0.625rem;
+    --c19-radius-lg: 1rem;
+    --c19-radius-pill: 999px;
+
+    --c19-line: 1px;
+    --c19-line-strong: 2px;
+    --c19-icon-ratio: 19 / 18;
+    --c19-content: 78rem;
+    --c19-content-wide: 94rem;
+    --c19-sidebar: 15.5rem;
+    --c19-gutter: clamp(1rem, 3vw, 2.5rem);
+    --c19-control-height: 2.75rem;
+
+    --c19-shadow-1: 0 1px 0 rgb(var(--c19-shadow-color) / 0.18), 0 10px 28px rgb(var(--c19-shadow-color) / 0.07);
+    --c19-shadow-2: 0 1px 0 rgb(var(--c19-shadow-color) / 0.22), 0 22px 60px rgb(var(--c19-shadow-color) / 0.13);
+
+    --c19-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --c19-duration-fast: 110ms;
+    --c19-duration: 220ms;
+    --c19-duration-slow: 760ms;
+    --c19-duration-signal: 980ms;
+    --c19-stagger-signal: 55ms;
+  }
+
+  [data-c19-theme="bridge"],
+  .c19-theme-bridge {
+    color-scheme: dark;
+    --c19-bg: #080b09;
+    --c19-surface: #111512;
+    --c19-surface-raised: #171c18;
+    --c19-surface-sunken: #050705;
+    --c19-ink: #f1f0e8;
+    --c19-ink-muted: #adb1a9;
+    --c19-border: #4b514a;
+    --c19-border-strong: #8b9189;
+    --c19-grid: rgb(241 242 233 / 0.035);
+    --c19-signal-red: #ff5f65;
+    --c19-life-gray: #a8aea7;
+    --c19-vacuum-black: #020302;
+    --c19-process-yellow: #f2c94c;
+    --c19-process-orange: #ff8124;
+    --c19-cold-blue: #6da7eb;
+    --c19-biological-green: #5fc88d;
+    --c19-icon-frame: #ed2024;
+    --c19-icon-plate: #e5e8f1;
+    --c19-icon-structure: #847a73;
+    --c19-icon-dark: #0f0e09;
+    --c19-icon-process: #e76c1a;
+    --c19-icon-cold: #2f3795;
+    --c19-icon-bio: #3f5f2d;
+    --c19-icon-outline: #ffffff;
+    --c19-icon-cutout: var(--c19-surface);
+    --c19-on-red: #170507;
+    --c19-on-gray: #111310;
+    --c19-on-black: #ffffff;
+    --c19-on-yellow: #151613;
+    --c19-on-orange: #151613;
+    --c19-on-blue: #080a1c;
+    --c19-on-green: #06110a;
+    --c19-focus: #a7b1ff;
+    --c19-selection: #742931;
+    --c19-shadow-color: 0 0 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-c19-theme="auto"] {
+      color-scheme: dark;
+      --c19-bg: #080b09;
+      --c19-surface: #111512;
+      --c19-surface-raised: #171c18;
+      --c19-surface-sunken: #050705;
+      --c19-ink: #f1f0e8;
+      --c19-ink-muted: #adb1a9;
+      --c19-border: #4b514a;
+      --c19-border-strong: #8b9189;
+      --c19-grid: rgb(241 242 233 / 0.035);
+      --c19-signal-red: #ff5f65;
+      --c19-life-gray: #a8aea7;
+      --c19-vacuum-black: #020302;
+      --c19-process-yellow: #f2c94c;
+      --c19-process-orange: #ff8124;
+      --c19-cold-blue: #6da7eb;
+      --c19-biological-green: #5fc88d;
+      --c19-icon-frame: #ed2024;
+      --c19-icon-plate: #e5e8f1;
+      --c19-icon-structure: #847a73;
+      --c19-icon-dark: #0f0e09;
+      --c19-icon-process: #e76c1a;
+      --c19-icon-cold: #2f3795;
+      --c19-icon-bio: #3f5f2d;
+      --c19-icon-outline: #ffffff;
+      --c19-icon-cutout: var(--c19-surface);
+      --c19-on-red: #170507;
+      --c19-on-gray: #111310;
+      --c19-on-black: #ffffff;
+      --c19-on-yellow: #151613;
+      --c19-on-orange: #151613;
+      --c19-on-blue: #080a1c;
+      --c19-on-green: #06110a;
+      --c19-focus: #a7b1ff;
+      --c19-selection: #742931;
+      --c19-shadow-color: 0 0 0;
+    }
+  }
+}

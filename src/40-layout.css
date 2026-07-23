@@ -1,0 +1,27 @@
+@layer c19.layout {
+  .c19-container {
+    inline-size: calc(100% - (2 * var(--c19-gutter)));
+    max-inline-size: var(--c19-content);
+    min-inline-size: 0;
+    margin-inline: auto;
+  }
+  .c19-container--wide { --c19-content: var(--c19-content-wide); }
+  .c19-container--narrow { --c19-content: 58rem; }
+  .c19-section { padding-block: clamp(3rem, 7vw, 6.5rem); }
+  .c19-stack { display: flex; flex-direction: column; gap: var(--c19-stack-gap, var(--c19-space-4)); min-inline-size: 0; }
+  .c19-cluster { display: flex; flex-wrap: wrap; gap: var(--c19-cluster-gap, var(--c19-space-3)); align-items: var(--c19-cluster-align, center); justify-content: var(--c19-cluster-justify, flex-start); min-inline-size: 0; }
+  .c19-grid { display: grid; grid-template-columns: repeat(var(--c19-grid-cols, 12), minmax(0, 1fr)); gap: var(--c19-grid-gap, var(--c19-space-4)); min-inline-size: 0; }
+  .c19-auto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--c19-grid-min, 15rem)), 1fr)); gap: var(--c19-grid-gap, var(--c19-space-4)); min-inline-size: 0; }
+  .c19-with-sidebar, .c19-doc-layout { display: grid; grid-template-columns: minmax(0, var(--c19-sidebar)) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+  .c19-with-sidebar > *, .c19-doc-layout > * { min-inline-size: 0; }
+  .c19-sticky { position: sticky; inset-block-start: var(--c19-sticky-top, 5rem); }
+  .c19-center { display: grid; place-items: center; }
+  .c19-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 5vw, 5rem); align-items: var(--c19-split-align, center); min-inline-size: 0; }
+  .c19-page { min-block-size: 100dvh; min-inline-size: 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr auto; }
+  .c19-page > * { min-inline-size: 0; max-inline-size: 100%; }
+  .c19-scroll-row { max-inline-size: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+  @media (max-width: 58rem) {
+    .c19-with-sidebar, .c19-doc-layout, .c19-split { grid-template-columns: minmax(0, 1fr); }
+    .c19-with-sidebar > .c19-sticky { position: static; }
+  }
+}
