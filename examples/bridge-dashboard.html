@@ -80,12 +80,11 @@
 
 <header class="c19-appbar">
   <div class="c19-container c19-container--wide c19-appbar__inner">
-    <a class="c19-brand" href="../index.html">
-      <span class="c19-brand__mark"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cargo"></use></svg></span>
+    <a class="c19-brand c19-brand--manual" href="../index.html">
       <span class="c19-brand__text">CARGO/19 CSS</span>
     </a>
     <div class="c19-cluster c19-gap-2">
-      <a class="c19-button c19-button--ghost c19-button--small" href="../examples/bridge-dashboard.html">Live example</a>
+      <span class="c19-status c19-status--ok" data-c19-demo-stream-status>Telemetry live</span>
       <button class="c19-icon-button c19-icon-button--ghost" type="button" data-c19-theme-toggle aria-label="Switch theme" data-c19-tooltip="Switch paper / bridge theme" data-c19-tooltip-position="end">
         <svg class="c19-icon" aria-hidden="true"><use href="#c19-light"></use></svg><span class="c19-sr-only" data-c19-theme-label>Bridge</span>
       </button>
@@ -97,36 +96,79 @@
     <section class="c19-example-hero">
       <div class="c19-container c19-container--wide c19-cluster c19-justify-between c19-align-end">
         <div><p class="c19-kicker">Example application / bridge theme</p><h1 class="c19-heading-1 c19-mt-2">Operations bridge</h1></div>
-        <div class="c19-data" data-c19-demo-clock>UTC 21:14:51 · SHIFT 04</div>
+        <div class="c19-stack c19-gap-2 c19-align-end"><div class="c19-data" data-c19-demo-clock>UTC 21:14:51 · SHIFT 04</div><span class="c19-badge c19-badge--green" data-c19-demo-cycle>Cycle 0001</span></div>
       </div>
     </section>
     <div class="c19-example-main c19-stack c19-gap-5">
       <div class="c19-auto-grid c19-grid-min-12 c19-gap-3">
         <div class="c19-stat"><span class="c19-stat__value" data-c19-demo-atmosphere>101.3</span><span class="c19-stat__label">Atmosphere / kPa</span></div>
         <div class="c19-stat"><span class="c19-stat__value" data-c19-demo-power>92.4</span><span class="c19-stat__label">Power bus A / %</span></div>
-        <div class="c19-stat"><span class="c19-stat__value">08</span><span class="c19-stat__label">Crew active</span></div>
-        <div class="c19-stat"><span class="c19-stat__value">03</span><span class="c19-stat__label">Open tasks</span></div>
+        <div class="c19-stat"><span class="c19-stat__value" data-c19-demo-crew>08</span><span class="c19-stat__label">Crew active</span></div>
+        <div class="c19-stat"><span class="c19-stat__value" data-c19-demo-tasks>03</span><span class="c19-stat__label">Open tasks</span></div>
+        <div class="c19-stat"><span class="c19-stat__value" data-c19-demo-packets>148</span><span class="c19-stat__label">Packets / min</span></div>
+      </div>
+      <div class="c19-alert c19-alert--info" role="status" aria-live="polite" data-c19-demo-advisory>
+        <span><span class="c19-symbol c19-symbol-sm"><svg class="c19-icon" aria-hidden="true"><use href="#c19-communications"></use></svg></span></span>
+        <div><strong class="c19-alert__title" data-c19-demo-advisory-title>Telemetry synchronized</strong><p data-c19-demo-advisory-message>All bridge channels are reporting inside nominal tolerances.</p></div>
       </div>
       <div class="c19-grid c19-gap-4" style="--c19-grid-cols:12">
         <section class="c19-panel c19-accent-green c19-col-4">
-          <header class="c19-panel__header"><h2 class="c19-panel__title">Life support</h2><span class="c19-status c19-status--ok">Nominal</span></header>
-          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl "><svg class="c19-icon" aria-hidden="true"><use href="#c19-life-support"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data">O₂ 20.9%</span><span class="c19-data">CO₂ 0.04%</span><span class="c19-data" data-c19-demo-humidity>RH 42%</span></div></div><div class="c19-segmented-meter" data-c19-demo-meter style="--c19-segments:12;--c19-value:84%;--c19-meter-color:var(--c19-biological-green)"></div></div>
+          <header class="c19-panel__header"><h2 class="c19-panel__title">Life support</h2><span class="c19-status c19-status--ok" data-c19-demo-life-status>Nominal</span></header>
+          <div class="c19-panel__body c19-stack c19-gap-4">
+            <div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl"><svg class="c19-icon" aria-hidden="true"><use href="#c19-life-support"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-oxygen>O₂ 20.9%</span><span class="c19-data" data-c19-demo-co2>CO₂ 0.04%</span><span class="c19-data" data-c19-demo-humidity>RH 42%</span><span class="c19-data" data-c19-demo-temperature>19.6 °C</span></div></div>
+            <div class="c19-segmented-meter" data-c19-demo-meter style="--c19-segments:12;--c19-meter-color:var(--c19-biological-green)" aria-label="Life-support reserve 84 percent"><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span></span><span></span></div>
+          </div>
         </section>
         <section class="c19-panel c19-accent-blue c19-col-4">
           <header class="c19-panel__header"><h2 class="c19-panel__title">Navigation</h2><span class="c19-badge c19-badge--blue">Autopilot</span></header>
-          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl "><svg class="c19-icon" aria-hidden="true"><use href="#c19-navigation"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-heading>HDG 281.4°</span><span class="c19-data">VEL 0.82 c</span><span class="c19-data">ETA 19:42</span></div></div><button class="c19-button c19-button--secondary" type="button" data-c19-demo-command="nav --review">Review course</button></div>
+          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl"><svg class="c19-icon" aria-hidden="true"><use href="#c19-navigation"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-heading>HDG 281.4°</span><span class="c19-data" data-c19-demo-velocity>VEL 0.82 c</span><span class="c19-data" data-c19-demo-eta>ETA 19:42</span><span class="c19-data" data-c19-demo-course-error>ERR 0.04°</span></div></div><button class="c19-button c19-button--secondary" type="button" data-c19-demo-command="nav --review">Review course</button></div>
         </section>
         <section class="c19-panel c19-accent-orange c19-col-4">
           <header class="c19-panel__header"><h2 class="c19-panel__title">Cargo hold</h2><span class="c19-status c19-status--warn">Observe</span></header>
-          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl "><svg class="c19-icon" aria-hidden="true"><use href="#c19-cargo"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data">MASS 182 t</span><span class="c19-data" data-c19-demo-load>LOAD 76%</span><span class="c19-data">SEALS 18/18</span></div></div><button class="c19-button c19-button--warning" type="button" data-c19-demo-command="cargo --inspect">Inspect hold</button></div>
+          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-xl"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cargo"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-mass>MASS 182.0 t</span><span class="c19-data" data-c19-demo-load>LOAD 76%</span><span class="c19-data" data-c19-demo-seals>SEALS 18/18</span></div></div><div class="c19-progress" data-c19-demo-cargo-progress aria-label="Cargo capacity 76 percent"><div class="c19-progress__bar" data-c19-demo-cargo-bar style="--c19-value:76;--c19-progress-color:var(--c19-process-yellow)"></div></div><button class="c19-button c19-button--warning" type="button" data-c19-demo-command="cargo --inspect">Inspect hold</button></div>
         </section>
         <section class="c19-panel c19-accent-red c19-col-8">
           <header class="c19-panel__header"><h2 class="c19-panel__title">Sector register</h2><span class="c19-data">AUTO REFRESH / 05 s</span></header>
-          <div class="c19-table-wrap"><table class="c19-table"><thead><tr><th>Sign</th><th>Sector</th><th>State</th><th>Reading</th><th>Action</th></tr></thead><tbody><tr><td><span class="c19-symbol c19-symbol-sm "><svg class="c19-icon" aria-hidden="true"><use href="#c19-airlock"></use></svg></span></td><td>A-01 / Airlock</td><td><span class="c19-status c19-status--ok">Nominal</span></td><td class="c19-data" data-c19-demo-pressure>101.3 kPa</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="airlock --cycle">Open</button></td></tr><tr><td><span class="c19-symbol c19-symbol-sm "><svg class="c19-icon" aria-hidden="true"><use href="#c19-cryogenic"></use></svg></span></td><td>C-04 / Cold bay</td><td><span class="c19-status c19-status--cold">Locked</span></td><td class="c19-data">−142 °C</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="cold-bay --inspect">Inspect</button></td></tr><tr><td><span class="c19-symbol c19-symbol-sm "><svg class="c19-icon" aria-hidden="true"><use href="#c19-radiation"></use></svg></span></td><td>R-02 / Reactor</td><td><span class="c19-status c19-status--warn">Observe</span></td><td class="c19-data" data-c19-demo-radiation>0.82 mSv</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="reactor --details">Details</button></td></tr></tbody></table></div>
+          <div class="c19-table-wrap"><table class="c19-table"><thead><tr><th>Sign</th><th>Sector</th><th>State</th><th>Reading</th><th>Action</th></tr></thead><tbody>
+            <tr><td><span class="c19-symbol c19-symbol-sm"><svg class="c19-icon" aria-hidden="true"><use href="#c19-airlock"></use></svg></span></td><td>A-01 / Airlock</td><td><span class="c19-status c19-status--ok">Nominal</span></td><td class="c19-data" data-c19-demo-pressure>101.3 kPa</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="airlock --cycle">Open</button></td></tr>
+            <tr><td><span class="c19-symbol c19-symbol-sm"><svg class="c19-icon" aria-hidden="true"><use href="#c19-cryogenic"></use></svg></span></td><td>C-04 / Cold bay</td><td><span class="c19-status c19-status--cold">Locked</span></td><td class="c19-data" data-c19-demo-cold>−142.0 °C</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="cold-bay --inspect">Inspect</button></td></tr>
+            <tr><td><span class="c19-symbol c19-symbol-sm"><svg class="c19-icon" aria-hidden="true"><use href="#c19-radiation"></use></svg></span></td><td>R-02 / Reactor</td><td><span class="c19-status c19-status--warn" data-c19-demo-reactor-status>Observe</span></td><td class="c19-data" data-c19-demo-radiation>0.82 mSv</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="reactor --details">Details</button></td></tr>
+            <tr><td><span class="c19-symbol c19-symbol-sm"><svg class="c19-icon" aria-hidden="true"><use href="#c19-communications"></use></svg></span></td><td>U-07 / Uplink</td><td><span class="c19-status c19-status--ok" data-c19-demo-uplink-status>Locked</span></td><td class="c19-data" data-c19-demo-latency>18 ms</td><td><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="comms --resync">Resync</button></td></tr>
+          </tbody></table></div>
         </section>
         <section class="c19-panel c19-accent-blue c19-col-4">
           <header class="c19-panel__header"><h2 class="c19-panel__title">Command log</h2><span class="c19-badge">Live</span></header>
           <div class="c19-panel__body"><div class="c19-terminal" data-c19-demo-log><p><span class="c19-terminal__prompt">SYS/</span> status --all</p><p>systems nominal / 01 advisory</p><p><span class="c19-terminal__prompt">SYS/</span> nav --verify</p><p>course accepted / checksum 19A</p></div></div>
+        </section>
+        <section class="c19-panel c19-accent-orange c19-col-5">
+          <header class="c19-panel__header"><h2 class="c19-panel__title">Power distribution</h2><span class="c19-status c19-status--ok" data-c19-demo-power-status>Balanced</span></header>
+          <div class="c19-panel__body c19-stack c19-gap-4">
+            <div class="c19-stack c19-gap-2"><div class="c19-cluster c19-justify-between"><span class="c19-label-text">Primary bus A</span><span class="c19-data" data-c19-demo-bus-a>92%</span></div><div class="c19-progress"><div class="c19-progress__bar" data-c19-demo-bus-a-bar style="--c19-value:92;--c19-progress-color:var(--c19-biological-green)"></div></div></div>
+            <div class="c19-stack c19-gap-2"><div class="c19-cluster c19-justify-between"><span class="c19-label-text">Primary bus B</span><span class="c19-data" data-c19-demo-bus-b>88%</span></div><div class="c19-progress"><div class="c19-progress__bar" data-c19-demo-bus-b-bar style="--c19-value:88;--c19-progress-color:var(--c19-cold-blue)"></div></div></div>
+            <div class="c19-stack c19-gap-2"><div class="c19-cluster c19-justify-between"><span class="c19-label-text">Auxiliary reserve</span><span class="c19-data" data-c19-demo-aux>64%</span></div><div class="c19-progress"><div class="c19-progress__bar" data-c19-demo-aux-bar style="--c19-value:64;--c19-progress-color:var(--c19-process-yellow)"></div></div></div>
+            <div class="c19-cluster c19-justify-between"><label class="c19-switch"><input type="checkbox" checked data-c19-demo-aux-toggle><span class="c19-switch__track" aria-hidden="true"></span><span>Auxiliary bus</span></label><button class="c19-button c19-button--ghost c19-button--small" type="button" data-c19-demo-command="power --balance">Balance</button></div>
+          </div>
+        </section>
+        <section class="c19-panel c19-accent-blue c19-col-4" data-c19-tabs>
+          <header class="c19-panel__header"><h2 class="c19-panel__title">Flight channels</h2><span class="c19-badge c19-badge--blue">Synchronized</span></header>
+          <div class="c19-panel__body c19-stack c19-gap-4">
+            <div class="c19-tabs"><div class="c19-tabs__list" role="tablist" aria-label="Flight channel">
+              <button class="c19-tabs__tab" role="tab" id="bridge-tab-guidance" aria-controls="bridge-panel-guidance" aria-selected="true">Guidance</button>
+              <button class="c19-tabs__tab" role="tab" id="bridge-tab-propulsion" aria-controls="bridge-panel-propulsion" aria-selected="false" tabindex="-1">Propulsion</button>
+              <button class="c19-tabs__tab" role="tab" id="bridge-tab-cargo" aria-controls="bridge-panel-cargo" aria-selected="false" tabindex="-1">Cargo</button>
+            </div></div>
+            <div id="bridge-panel-guidance" role="tabpanel" aria-labelledby="bridge-tab-guidance" class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-tab-heading>HEADING 281.4°</span><span class="c19-data" data-c19-demo-tab-error>COURSE ERROR 0.04°</span></div>
+            <div id="bridge-panel-propulsion" role="tabpanel" aria-labelledby="bridge-tab-propulsion" class="c19-stack c19-gap-2" hidden><span class="c19-data" data-c19-demo-tab-velocity>VELOCITY 0.82 c</span><span class="c19-data" data-c19-demo-thrust>THRUST 67%</span></div>
+            <div id="bridge-panel-cargo" role="tabpanel" aria-labelledby="bridge-tab-cargo" class="c19-stack c19-gap-2" hidden><span class="c19-data" data-c19-demo-tab-load>CAPACITY 76%</span><span class="c19-data" data-c19-demo-tab-seals>SEALS 18/18</span></div>
+          </div>
+        </section>
+        <section class="c19-panel c19-accent-green c19-col-3">
+          <header class="c19-panel__header"><h2 class="c19-panel__title">Uplink</h2><span class="c19-status c19-status--ok">Locked</span></header>
+          <div class="c19-panel__body c19-stack c19-gap-4"><div class="c19-cluster c19-justify-between"><span class="c19-symbol c19-symbol-lg"><svg class="c19-icon" aria-hidden="true"><use href="#c19-communications"></use></svg></span><div class="c19-stack c19-gap-2"><span class="c19-data" data-c19-demo-signal>SIGNAL 94%</span><span class="c19-data" data-c19-demo-uplink-latency>LATENCY 18 ms</span></div></div><div class="c19-segmented-meter" data-c19-demo-signal-meter style="--c19-segments:8;--c19-meter-color:var(--c19-biological-green)" aria-label="Uplink signal 94 percent"><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span data-active></span><span></span></div><button class="c19-button c19-button--secondary c19-button--small" type="button" data-c19-demo-command="comms --resync">Resync channel</button></div>
+        </section>
+        <section class="c19-panel c19-accent-green c19-col-12">
+          <header class="c19-panel__header"><h2 class="c19-panel__title">Command console</h2><label class="c19-switch"><input type="checkbox" checked data-c19-demo-stream-toggle><span class="c19-switch__track" aria-hidden="true"></span><span>Live stream</span></label></header>
+          <div class="c19-panel__body"><form class="c19-commandbar" data-c19-demo-command-form><span class="c19-terminal__prompt">CMD</span><input class="c19-input" name="command" autocomplete="off" aria-label="Bridge command" placeholder="Try status --all, nav --review, or comms --resync" data-c19-demo-command-input><button class="c19-button c19-button--small" type="submit">Run</button><kbd class="c19-key">Return</kbd></form></div>
         </section>
       </div>
     </div>
