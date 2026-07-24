@@ -1,0 +1,25 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: Verify generated release
+        run: |
+          ruby tools/release.rb
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git status --short
+            git diff --exit-code
+            exit 1
+          fi
