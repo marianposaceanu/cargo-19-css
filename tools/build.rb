@@ -40,6 +40,21 @@ module Cargo19
         puts "Built dist/cargo19.css, cargo19-core.css, cargo19.min.css, and cargo19.js"
       end
 
+      def minify(css)
+        protected = []
+        tokenized = protect_css_literals(css, protected)
+        output = tokenized
+          .gsub(/\s+/, " ")
+          .gsub(/\s*([{};,])\s*/, '\1')
+          .gsub(/:\s+/, ":")
+          .strip
+
+        protected.each_with_index do |literal, index|
+          output.sub!(placeholder(index), literal)
+        end
+        output
+      end
+
       private
 
       def font_import
@@ -48,12 +63,56 @@ module Cargo19
         CSS
       end
 
-      def minify(css)
-        css
-          .gsub(%r{/\*(?!\!)[\s\S]*?\*/}, "")
-          .gsub(/\s+/, " ")
-          .gsub(/\s*([{}:;,])\s*/, '\1')
-          .strip
+      def protect_css_literals(css, protected)
+        output = +""
+        index = 0
+
+        while index < css.length
+          character = css[index]
+          following = css[index + 1]
+
+          if character == '"' || character == "'"
+            ending = css_string_end(css, index)
+            output << store_protected(css[index...ending], protected)
+            index = ending
+          elsif character == "/" && following == "*"
+            ending = css.index("*/", index + 2)
+            raise ArgumentError, "Unclosed CSS comment" unless ending
+
+            comment = css[index...(ending + 2)]
+            output << (comment.start_with?("/*!") ? store_protected(comment, protected) : " ")
+            index = ending + 2
+          else
+            output << character
+            index += 1
+          end
+        end
+
+        output
+      end
+
+      def css_string_end(css, start)
+        quote = css[start]
+        index = start + 1
+        while index < css.length
+          if css[index] == "\\"
+            index += 2
+          elsif css[index] == quote
+            return index + 1
+          else
+            index += 1
+          end
+        end
+        raise ArgumentError, "Unclosed CSS string"
+      end
+
+      def store_protected(literal, protected)
+        protected << literal
+        placeholder(protected.length - 1)
+      end
+
+      def placeholder(index)
+        "\0c19-#{index}\0"
       end
     end
   end

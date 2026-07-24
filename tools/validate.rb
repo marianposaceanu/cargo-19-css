@@ -8,6 +8,7 @@ require "pathname"
 require "rexml/document"
 require "set"
 require "uri"
+require_relative "build"
 
 module Cargo19
   class ValidationFailure < StandardError; end
@@ -121,6 +122,8 @@ module Cargo19
         report("every spacing utility used by the pages is defined")
         check_css
         report("CSS structure and version banners")
+        check_minification
+        report("minified selector and string semantics")
         check_mobile_css_contract
         report("mobile control alignment, touch targets, and overflow safeguards")
         check_javascript
@@ -411,6 +414,23 @@ module Cargo19
           end
           fail!("Missing version banner in #{relative_path}") unless text.include?("CARGO/19 CSS v#{VERSION}")
         end
+      end
+
+      def check_minification
+        fixture = '.scope :where(h1, h2) { /* remove */ content: "Status: ready,  steady; /* set */"; }'
+        expected = '.scope :where(h1,h2){content:"Status: ready,  steady; /* set */";}'
+        fail!("CSS minifier changes selector or string semantics") unless CssBuilder.minify(fixture) == expected
+
+        readable = File.read(File.join(ROOT, "dist", "cargo19.css"), encoding: "UTF-8")
+        minified = File.read(File.join(ROOT, "dist", "cargo19.min.css"), encoding: "UTF-8")
+        descendant_pseudos = readable.scan(/\.c19-[\w-]+\s+:(?:where|is|not|has)\([^)]*\)/).uniq
+        fail!("Readable CSS must exercise descendant pseudo selectors") if descendant_pseudos.empty?
+
+        missing = descendant_pseudos.reject do |selector|
+          normalized = selector.gsub(/\s*,\s*/, ",").gsub(/\s+/, " ")
+          minified.include?(normalized)
+        end
+        fail!("Minified CSS changes descendant pseudo selectors: #{missing.join(", ")}") unless missing.empty?
       end
 
       def check_mobile_css_contract
