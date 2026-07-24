@@ -51,7 +51,7 @@ module Cargo19
           .strip
 
         protected.each_with_index do |literal, index|
-          output.sub!(placeholder(index), literal)
+          output.sub!(placeholder(index)) { literal }
         end
         output
       end

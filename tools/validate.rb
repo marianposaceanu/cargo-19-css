@@ -422,6 +422,10 @@ module Cargo19
         expected = '.scope :where(h1,h2){content:"Status: ready,  steady; /* set */";}'
         fail!("CSS minifier changes selector or string semantics") unless CssBuilder.minify(fixture) == expected
 
+        escaped_fixture = '.scope::before { content: "\\2192  ready"; }'
+        escaped_expected = '.scope::before{content:"\\2192  ready";}'
+        fail!("CSS minifier changes escaped string literals") unless CssBuilder.minify(escaped_fixture) == escaped_expected
+
         readable = File.read(File.join(ROOT, "dist", "cargo19.css"), encoding: "UTF-8")
         minified = File.read(File.join(ROOT, "dist", "cargo19.min.css"), encoding: "UTF-8")
         descendant_pseudos = readable.scan(/\.c19-[\w-]+\s+:(?:where|is|not|has)\([^)]*\)/).uniq
