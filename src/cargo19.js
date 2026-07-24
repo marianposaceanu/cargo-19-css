@@ -3,23 +3,30 @@
 
   const all = (selector, root = document) => [...root.querySelectorAll(selector)];
   const THEME_KEY = "c19-theme";
+  const darkThemeQuery = window.matchMedia?.("(prefers-color-scheme: dark)");
 
   function getTheme() {
     return document.documentElement.getAttribute("data-c19-theme") || "paper";
   }
 
+  function getEffectiveTheme(theme = getTheme()) {
+    if (theme !== "auto") return theme;
+    return darkThemeQuery?.matches ? "bridge" : "paper";
+  }
+
   function setTheme(theme, persist = true) {
     const safeTheme = ["paper", "bridge", "auto"].includes(theme) ? theme : "paper";
+    const effectiveTheme = getEffectiveTheme(safeTheme);
     document.documentElement.setAttribute("data-c19-theme", safeTheme);
     if (persist) {
       try { localStorage.setItem(THEME_KEY, safeTheme); } catch (_) { /* Storage can be unavailable. */ }
     }
     all("[data-c19-theme-toggle]").forEach((button) => {
-      const next = safeTheme === "bridge" ? "paper" : "bridge";
+      const next = effectiveTheme === "bridge" ? "paper" : "bridge";
       button.setAttribute("aria-label", `Switch to ${next} theme`);
-      button.setAttribute("aria-pressed", String(safeTheme === "bridge"));
+      button.setAttribute("aria-pressed", String(effectiveTheme === "bridge"));
       const label = button.querySelector("[data-c19-theme-label]");
-      if (label) label.textContent = safeTheme === "bridge" ? "Bridge" : "Paper";
+      if (label) label.textContent = effectiveTheme === "bridge" ? "Bridge" : "Paper";
     });
   }
 
@@ -114,6 +121,9 @@
   }
 
   restoreTheme();
+  darkThemeQuery?.addEventListener?.("change", () => {
+    if (getTheme() === "auto") setTheme("auto", false);
+  });
 
   all("[data-c19-tabs]").forEach((tabsRoot) => {
     const selected = tabsRoot.querySelector('[role="tab"][aria-selected="true"]') || tabsRoot.querySelector('[role="tab"]');
@@ -139,7 +149,7 @@
     if (closer) closer.closest("dialog")?.close();
 
     const themeToggle = event.target.closest("[data-c19-theme-toggle]");
-    if (themeToggle) setTheme(getTheme() === "bridge" ? "paper" : "bridge");
+    if (themeToggle) setTheme(getEffectiveTheme() === "bridge" ? "paper" : "bridge");
 
     const navToggle = event.target.closest("[data-c19-nav-toggle]");
     if (navToggle) toggleMobileNav(navToggle);
