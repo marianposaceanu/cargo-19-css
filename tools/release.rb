@@ -15,6 +15,7 @@ module Cargo19
     HASH_FILES = %w[
       dist/cargo19.css
       dist/cargo19-core.css
+      dist/cargo19-core.min.css
       dist/cargo19.min.css
       dist/cargo19.js
       icons/cargo19-icons.svg
@@ -46,6 +47,7 @@ module Cargo19
             full: "dist/cargo19.css",
             core: "dist/cargo19-core.css",
             minified: "dist/cargo19.min.css",
+            coreMinified: "dist/cargo19-core.min.css",
             javascript: "dist/cargo19.js"
           },
           documentation: {

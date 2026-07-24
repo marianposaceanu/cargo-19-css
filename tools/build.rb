@@ -33,11 +33,12 @@ module Cargo19
         javascript = "#{File.read(File.join(SOURCE_DIR, "cargo19.js"), encoding: "UTF-8").rstrip}\n"
 
         File.write(File.join(DIST_DIR, "cargo19-core.css"), core)
+        File.write(File.join(DIST_DIR, "cargo19-core.min.css"), "#{BANNER}#{minify(core.delete_prefix(BANNER))}\n")
         File.write(File.join(DIST_DIR, "cargo19.css"), full)
         File.write(File.join(DIST_DIR, "cargo19.min.css"), "#{BANNER}#{minify(full.delete_prefix(BANNER))}\n")
         File.write(File.join(DIST_DIR, "cargo19.js"), javascript)
 
-        puts "Built dist/cargo19.css, cargo19-core.css, cargo19.min.css, and cargo19.js"
+        puts "Built readable and minified full/core CSS plus dist/cargo19.js"
       end
 
       def minify(css)

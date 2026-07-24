@@ -12,6 +12,7 @@
     "full": "dist/cargo19.css",
     "core": "dist/cargo19-core.css",
     "minified": "dist/cargo19.min.css",
+    "coreMinified": "dist/cargo19-core.min.css",
     "javascript": "dist/cargo19.js"
   },
   "documentation": {

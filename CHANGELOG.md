@@ -28,6 +28,7 @@
 - Refined Navigation to a single directional pointer and linked the live dashboard directly from the tighter homepage hero.
 - Expanded the bridge dashboard with dynamic power, uplink, environmental, advisory, tab, switch, progress, meter, and command-console components, and removed its header icon.
 - Repaired mobile dismiss-control alignment, touch-target sizing, icon-button shrinkage, command-bar clipping, dialog actions, and contained horizontal scrollers after a full 320–430 px page audit.
+- Added a minified, font-request-free core build for direct production use.
 
 ## 1.2.0 — 2026-07-21
 

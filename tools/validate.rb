@@ -87,6 +87,7 @@ module Cargo19
     HASH_FILES = %w[
       dist/cargo19.css
       dist/cargo19-core.css
+      dist/cargo19-core.min.css
       dist/cargo19.min.css
       dist/cargo19.js
       icons/cargo19-icons.svg
@@ -406,7 +407,7 @@ module Cargo19
       end
 
       def check_css
-        %w[dist/cargo19.css dist/cargo19-core.css dist/cargo19.min.css].each do |relative_path|
+        %w[dist/cargo19.css dist/cargo19-core.css dist/cargo19-core.min.css dist/cargo19.min.css].each do |relative_path|
           text = File.read(File.join(ROOT, relative_path), encoding: "UTF-8")
           stripped = strip_css_comments_and_strings(text)
           { "{" => "}", "(" => ")", "[" => "]" }.each do |opening, closing|

@@ -12,7 +12,7 @@ The package is an independent design study. It is not an official product tied t
 
 ## What is included
 
-- layered source CSS and full, core, and minified distribution builds;
+- layered source CSS and readable and minified full/core distribution builds;
 - paper, bridge, and automatic color themes;
 - application navigation, panels, cards, controls, grouped forms, feedback, native popover menus, data display, overlays, terminals, and layout primitives;
 - 59 original SVG glyphs: 39 framed equipment signs and 20 interface icons;
@@ -31,7 +31,7 @@ The package is an independent design study. It is not an official product tied t
 </body>
 ```
 
-`dist/cargo19.css` imports the default web-font stack. Use `dist/cargo19-core.css` for the same framework with no external font request.
+`dist/cargo19.css` imports the default web-font stack. Use `dist/cargo19-core.css` or `dist/cargo19-core.min.css` for the same framework with no external font request.
 
 Serve the project directory over HTTP to browse the manual and external SVG sprite reliably:
 
@@ -48,6 +48,7 @@ Then open `/index.html` in the local server.
 | `dist/cargo19.css` | Readable full build with the Google Fonts import. |
 | `dist/cargo19-core.css` | Readable, font-request-free build with system fallbacks. |
 | `dist/cargo19.min.css` | Minified full build. |
+| `dist/cargo19-core.min.css` | Minified, font-request-free build. |
 | `dist/cargo19.js` | Optional behavior layer; no dependencies or globals. |
 
 ## Typography
