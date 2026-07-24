@@ -28,6 +28,9 @@
 - Refined Navigation to a single directional pointer and linked the live dashboard directly from the tighter homepage hero.
 - Expanded the bridge dashboard with dynamic power, uplink, environmental, advisory, tab, switch, progress, meter, and command-console components, and removed its header icon.
 - Repaired mobile dismiss-control alignment, touch-target sizing, icon-button shrinkage, command-bar clipping, dialog actions, and contained horizontal scrollers after a full 320–430 px page audit.
+- Preserved descendant pseudo selectors and quoted values in minified CSS, with semantic regression validation.
+- Corrected automatic-theme controls to reflect system color preference and hardened tab and mobile-navigation keyboard behavior.
+- Added CI that regenerates the release and rejects modified or untracked output.
 - Added a minified, font-request-free core build for direct production use.
 - Added repository metadata and reduced the npm package to runtime assets, source, icon exports, and reference files.
 

@@ -71,7 +71,7 @@ Apply a theme to the root document or any component subtree:
 <html data-c19-theme="auto">
 ```
 
-Theme state changed through `[data-c19-theme-toggle]` is persisted by the optional JavaScript helper.
+When `auto` is active, `[data-c19-theme-toggle]` reflects the effective system preference and switches to the opposite explicit theme. Explicit choices are persisted by the optional JavaScript helper.
 
 Use custom properties for local variation:
 
@@ -142,7 +142,7 @@ JavaScript is optional. `dist/cargo19.js` enables:
 - ARIA tab activation and arrow-key navigation;
 - native dialog open and close controls;
 - dismissible messages;
-- paper/bridge theme toggling with persisted state;
+- paper/bridge theme toggling that resolves automatic system preference and persists explicit choices;
 - the responsive manual navigation;
 - copy buttons for documentation code blocks;
 - live icon-catalog filtering and result counts.
@@ -170,7 +170,7 @@ ruby tools/build_docs.rb
 ruby tools/validate.rb
 ```
 
-Validation checks include icon counts and viewBoxes, duplicate SVG and HTML IDs, local asset links, generated-page theme usage, prohibition of page-local style blocks, font-binary exclusion, CSS delimiter balance, JavaScript syntax when Node.js is available, checksum freshness, and enforcement of the Ruby-only toolchain.
+Validation checks include icon counts and viewBoxes, duplicate SVG and HTML IDs, local asset links, generated-page theme usage, prohibition of page-local style blocks, font-binary exclusion, CSS delimiter balance and minification semantics, JavaScript syntax when Node.js is available, checksum freshness, and enforcement of the Ruby-only toolchain. GitHub Actions regenerates the complete release and fails if tracked or untracked output differs.
 
 ## Accessibility
 
@@ -190,7 +190,8 @@ The framework targets current evergreen browsers. It uses cascade layers, custom
 ## Project structure
 
 ```text
-cargo19-css-1.3.1/
+cargo-19-css/
+├── .github/workflows/        generated-release CI
 ├── dist/                     compiled CSS and optional JavaScript
 ├── src/                      layered source files
 ├── icons/                    sprite, 118 standalone exports, and catalog
