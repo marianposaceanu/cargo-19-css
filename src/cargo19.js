@@ -55,12 +55,14 @@
     if (moveFocus) tab.focus();
   }
 
-  function closeMobileNav() {
+  function closeMobileNav(restoreFocus = false) {
     const panel = document.querySelector("[data-c19-mobile-nav]");
     const toggle = document.querySelector("[data-c19-nav-toggle]");
     if (!panel || !toggle) return;
+    const wasOpen = !panel.hidden;
     panel.hidden = true;
     toggle.setAttribute("aria-expanded", "false");
+    if (restoreFocus && wasOpen) toggle.focus();
   }
 
   function toggleMobileNav(button) {
@@ -167,11 +169,12 @@
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMobileNav();
+    if (event.key === "Escape") closeMobileNav(true);
 
     const tab = event.target.closest('[role="tab"]');
     if (!tab) return;
     const list = tab.closest('[role="tablist"]');
+    if (!list) return;
     const tabs = all('[role="tab"]', list);
     const index = tabs.indexOf(tab);
     let next = null;
