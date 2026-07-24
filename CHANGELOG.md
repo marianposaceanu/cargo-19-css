@@ -29,6 +29,7 @@
 - Expanded the bridge dashboard with dynamic power, uplink, environmental, advisory, tab, switch, progress, meter, and command-console components, and removed its header icon.
 - Repaired mobile dismiss-control alignment, touch-target sizing, icon-button shrinkage, command-bar clipping, dialog actions, and contained horizontal scrollers after a full 320–430 px page audit.
 - Added a minified, font-request-free core build for direct production use.
+- Added repository metadata and reduced the npm package to runtime assets, source, icon exports, and reference files.
 
 ## 1.2.0 — 2026-07-21
 

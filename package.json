@@ -7,25 +7,22 @@
     "name": "Marian Posaceanu",
     "url": "https://marianposaceanu.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianposaceanu/cargo-19-css.git"
+  },
   "style": "dist/cargo19.css",
   "main": "dist/cargo19.js",
   "files": [
     "dist",
     "src",
     "icons",
-    "docs",
-    "examples",
-    "tools",
-    "index.html",
-    "README.md",
     "DIST-SHA256.txt",
     "COMPONENTS.md",
     "FONT-SOURCES.md",
     "NOTICE.md",
     "CHANGELOG.md",
-    "manifest.json",
-    "LICENSE",
-    "preview.png"
+    "manifest.json"
   ],
   "scripts": {
     "build": "ruby tools/release.rb",
