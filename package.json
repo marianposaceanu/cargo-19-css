@@ -17,6 +17,7 @@
     "dist",
     "src",
     "icons",
+    "tools",
     "DIST-SHA256.txt",
     "COMPONENTS.md",
     "FONT-SOURCES.md",

@@ -32,7 +32,7 @@
 - Corrected automatic-theme controls to reflect system color preference and hardened tab and mobile-navigation keyboard behavior.
 - Added CI that regenerates the release and rejects modified or untracked output.
 - Added a minified, font-request-free core build for direct production use.
-- Added repository metadata and reduced the npm package to runtime assets, source, icon exports, and reference files.
+- Added repository metadata and reduced the npm package to runtime assets, source, icon exports, build tooling, and reference files.
 
 ## 1.2.0 — 2026-07-21
 

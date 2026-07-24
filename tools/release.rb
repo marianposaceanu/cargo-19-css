@@ -51,8 +51,8 @@ module Cargo19
             javascript: "dist/cargo19.js"
           },
           documentation: {
-            entry: "index.html",
-            manual: "docs/index.html",
+            entry: "https://marianposaceanu.github.io/cargo-19-css/",
+            manual: "https://marianposaceanu.github.io/cargo-19-css/docs/",
             pages: 10,
             examples: 2,
             usesFrameworkOnly: true
